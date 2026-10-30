@@ -1,0 +1,98 @@
+# NeuroSearch 部署与维护手册
+
+> 这份文件跟着项目走，换电脑、换会话都能照着做，不依赖任何人的记忆。
+
+## 一、当前部署状态
+
+| 项目 | 值 |
+|---|---|
+| 公开访问地址 | https://neurosearch-ljgj.onrender.com |
+| Render 服务 ID | `srv-dbi79noae00c73be5410` |
+| Render 控制台 | https://dashboard.render.com/web/srv-dbi79noae00c73be5410 |
+| 源码仓库 | https://github.com/Jas1me/wenxian （当前为**公开**） |
+| 运行环境 | Python 3 · 新加坡节点 · 免费档 · main 分支 |
+| 构建命令 | `echo done` |
+| 启动命令 | `python server/server.py` |
+| 自动部署 | 已开启，推送到 main 分支即触发 |
+| 部署耗时 | 约 40 秒 |
+
+线上数据：144 篇文献 / 71 个期刊 / 覆盖 1985–2026 年。
+
+## 二、日常更新：不要删文件，改完提交就行
+
+**核心原则：改文件 → 提交到 GitHub → Render 自动重新部署，网址永远不变。**
+不需要删除任何东西，也不需要重新创建服务。
+
+### 方式 A：在 GitHub 网页上直接改（最简单）
+
+1. 打开 https://github.com/Jas1me/wenxian
+2. 点进要改的文件 → 右上角铅笔图标 Edit
+3. 改完拉到页面底部 → Commit changes
+4. 等约 40 秒，Render 自动部署完成，刷新网站就能看到
+
+### 方式 B：本地改完提交
+
+本地目录：`C:\Users\User\Desktop\neurosearch`
+
+```bash
+cd C:/Users/User/Desktop/neurosearch
+git add -A
+git commit -m "说明改了什么"
+git push origin main
+```
+
+> 已知问题：这台机器到 `github.com` 的 git 通道会超时（`api.github.com` 是通的）。
+> 如果 `git push` 卡住，改用 SSH 通道 `ssh.github.com:443`，或让 WorkBuddy
+> 用 GitHub Contents API 代传（脚本见工作区 `upload_github.py`）。
+
+## 三、新增文献：必须改 seed.py
+
+**关键机制**：数据库文件 `server/neurosearch.db` 不在版本控制里，
+每次部署都是全新实例，`server.py` 启动时会检查——数据库不存在就调用
+`seed.init_db()` 从 `seed.py` 重新生成。
+
+所以：
+
+- ✅ **正确做法**：在 `server/seed.py` 的 `SEED_ARTICLES` 列表里加一条
+  （第 39 行开始，格式照抄现有的 `dict(...)`），提交后重新部署，新文献就会出现。
+- ❌ **会丢失的做法**：通过网页表单或 `POST /api/articles` 接口添加的文献。
+  免费档磁盘是临时的，服务一重启就重置，这些记录会消失。
+
+新增一条的模板：
+
+```python
+dict(pmid=None,
+     title="文献标题（英文原文）",
+     authors="Smith J, et al",
+     journal="期刊名",
+     year=2025,
+     pub_type="临床试验",          # 或从：队列研究/系统评价/综述/Meta分析/病例报告/基础研究
+     collection="干预与康复",      # 或从：儿童早期筛查/基因检测与诊断/言语与沟通/新兴技术干预/共病研究
+     abstract="中文摘要……",
+     keywords="关键词; 关键词",
+     doi="10.xxxx/xxxx",
+     url="https://pubmed.ncbi.nlm.nih.gov/……"),
+```
+
+## 四、链接有效期
+
+**网址没有 90 天限制，也不会过期**——只要服务在，链接就一直在。
+
+真正有 90 天期限的是 **GitHub 个人访问令牌**（2027-01-28 到期）。它只影响
+"用 API 代你传文件"这个能力，已上线的服务不受任何影响。到期后重新生成一个
+给我即可。Render 的 API Key 不会自动过期。
+
+## 五、免费档的三个特性（不是故障）
+
+1. **冷启动**：15 分钟无人访问会休眠，下次打开要等 30–50 秒，之后恢复速度。
+   想去掉就升级到 $7/月的 Starter 档。
+2. **数据不持久**：服务重启后 SQLite 重置。种子文献会自动重建，
+   但通过订阅框提交的邮箱会丢失。需要长期保存的话要另存到外部服务。
+3. **仓库必须公开**：Render 用的是 OAuth 连接，读不了私有仓库。
+   如果改成私有，以后推送代码就不会再自动部署了（已运行的服务照常）。
+
+## 六、出问题怎么查
+
+- 服务状态、实时日志：Render 控制台 → 左侧 **Logs**
+- 手动重新部署：控制台右上角 **Manual Deploy** → **Deploy latest commit**
+- 想回滚：控制台 **Events** 里找到历史部署点 → Rollback
