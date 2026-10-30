@@ -50,6 +50,41 @@ git push origin main
 > 如果 `git push` 卡住，改用 SSH 通道 `ssh.github.com:443`，或让 WorkBuddy
 > 用 GitHub Contents API 代传（脚本见工作区 `upload_github.py`）。
 
+### 方式 D：拿到一份整体重写的新文件（不在原文件上改）
+
+经常遇到的情况：不是在原文件里改几行，而是拿到一份**全新写好**的 `seed.py`。
+
+**处理方式：直接覆盖同名文件，不用先删旧的。**
+Windows 复制粘贴时选"替换目标中的文件"即可。
+
+| 文件 | 必须放在这个位置，文件名不能改 |
+|---|---|
+| 文献数据 | `C:\Users\User\Desktop\neurosearch\server\seed.py` |
+| 后端 | `C:\Users\User\Desktop\neurosearch\server\server.py` |
+| 前端 | `C:\Users\User\Desktop\neurosearch\public\index.html` |
+
+**为什么文件名不能改**：`server.py` 第 16 行写死了 `import seed`，
+第 12 行硬编码了 `../public`。文件改名或挪位置，启动就会
+`ModuleNotFoundError`，部署直接失败。
+
+新文件放在别的地方（桌面、下载目录）也完全没关系——把路径告诉 WorkBuddy，
+它会帮你复制覆盖、校验、推送、部署，一步到位。
+
+**新的 `seed.py` 必须包含这三个东西**，否则后端起不来：
+
+| 必须存在 | 作用 | 当前所在行 |
+|---|---|---|
+| `SEED_ARTICLES` | 文献列表 | 第 39 行 |
+| `COLLECTION_META` | 六个专题的定义 | 第 1028 行 |
+| `init_db(force=False)` | 建库函数 | 第 1043 行 |
+
+覆盖后想本地预览，注意顺序（第一条不能省）：
+
+```bash
+python server/seed.py      # 强制重建数据库，新文献才会出现
+python server/server.py    # 打开 http://localhost:8000
+```
+
 ## 三、⚠️ 自动部署实测不生效，改完代码要手动触发
 
 **2026-10-30 实测**：往 main 分支推送新提交后，Render **没有**自动重新部署
