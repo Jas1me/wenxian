@@ -13,14 +13,14 @@
 | 运行环境 | Python 3 · 新加坡节点 · 免费档 · main 分支 |
 | 构建命令 | `echo done` |
 | 启动命令 | `python server/server.py` |
-| 自动部署 | 已开启，推送到 main 分支即触发 |
+| 自动部署 | 已开启，但**实测不生效**（见第三节），需手动或 API 触发 |
 | 部署耗时 | 约 40 秒 |
 
 线上数据：144 篇文献 / 71 个期刊 / 覆盖 1985–2026 年。
 
 ## 二、日常更新：不要删文件，改完提交就行
 
-**核心原则：改文件 → 提交到 GitHub → Render 自动重新部署，网址永远不变。**
+**核心原则：改文件 → 提交到 GitHub → 触发一次重新部署，网址永远不变。**
 不需要删除任何东西，也不需要重新创建服务。
 
 ### 方式 A：在 GitHub 网页上直接改（最简单）
@@ -28,9 +28,14 @@
 1. 打开 https://github.com/Jas1me/wenxian
 2. 点进要改的文件 → 右上角铅笔图标 Edit
 3. 改完拉到页面底部 → Commit changes
-4. 等约 40 秒，Render 自动部署完成，刷新网站就能看到
+4. 按第三节的方式触发一次部署（约 40 秒），刷新网站就能看到
 
-### 方式 B：本地改完提交
+### 方式 B：改完让 WorkBuddy 帮你部署
+
+把改好的文件（或"我改完了"）告诉 WorkBuddy，它会用 Render API 直接触发部署，
+约 40 秒完成。这是最省事的方式。
+
+### 方式 C：本地改完提交
 
 本地目录：`C:\Users\User\Desktop\neurosearch`
 
@@ -45,7 +50,36 @@ git push origin main
 > 如果 `git push` 卡住，改用 SSH 通道 `ssh.github.com:443`，或让 WorkBuddy
 > 用 GitHub Contents API 代传（脚本见工作区 `upload_github.py`）。
 
-## 三、新增文献：必须改 seed.py
+## 三、⚠️ 自动部署实测不生效，改完代码要手动触发
+
+**2026-10-30 实测**：往 main 分支推送新提交后，Render **没有**自动重新部署
+（仓库已到 `1cd661ca`，服务仍停在旧提交 `271a15de`）。
+原因：Render 这次是通过 OAuth 连接的 GitHub，没有安装 webhook，
+所以收不到 push 事件。`autoDeployTrigger` 显示 `commit` 但实际不触发。
+
+触发部署有三种方式，选一个即可：
+
+| 方式 | 怎么做 | 适合 |
+|---|---|---|
+| 让 WorkBuddy 触发 | 说一声"部署一下"，它调 API 完成 | 日常最省事 |
+| 控制台手动 | Render 控制台 → 右上角 **Manual Deploy** → **Deploy latest commit** | 不想找我时 |
+| 配 Deploy Hook（一劳永逸） | 见下方步骤 | 想彻底自动化 |
+
+**配置 Deploy Hook（配一次，以后推送即自动部署）：**
+
+1. Render 控制台 → 服务 → **Settings** → 找到 **Deploy Hook** → 复制那个 URL
+   （形如 `https://api.render.com/deploy/srv-xxx?key=yyy`）
+2. GitHub 仓库 → **Settings** → **Webhooks** → **Add webhook**
+3. Payload URL 粘贴刚复制的地址；Content type 选 `application/json`
+4. 触发事件选 **Just the push event** → **Add webhook**
+
+配好后，以后每次推送代码都会自动触发部署，不用再管。
+
+> 补充：GitHub 那边的 webhook 需要仓库管理员权限才能添加。
+> 当前的细粒度令牌只有 Contents 和 Metadata 权限，加不了，
+> 所以这一步要在网页上手动做。
+
+## 四、新增文献：必须改 seed.py
 
 **关键机制**：数据库文件 `server/neurosearch.db` 不在版本控制里，
 每次部署都是全新实例，`server.py` 启动时会检查——数据库不存在就调用
@@ -74,7 +108,7 @@ dict(pmid=None,
      url="https://pubmed.ncbi.nlm.nih.gov/……"),
 ```
 
-## 四、链接有效期
+## 五、链接有效期
 
 **网址没有 90 天限制，也不会过期**——只要服务在，链接就一直在。
 
@@ -82,7 +116,7 @@ dict(pmid=None,
 "用 API 代你传文件"这个能力，已上线的服务不受任何影响。到期后重新生成一个
 给我即可。Render 的 API Key 不会自动过期。
 
-## 五、免费档的三个特性（不是故障）
+## 六、免费档的三个特性（不是故障）
 
 1. **冷启动**：15 分钟无人访问会休眠，下次打开要等 30–50 秒，之后恢复速度。
    想去掉就升级到 $7/月的 Starter 档。
@@ -91,7 +125,7 @@ dict(pmid=None,
 3. **仓库必须公开**：Render 用的是 OAuth 连接，读不了私有仓库。
    如果改成私有，以后推送代码就不会再自动部署了（已运行的服务照常）。
 
-## 六、出问题怎么查
+## 七、出问题怎么查
 
 - 服务状态、实时日志：Render 控制台 → 左侧 **Logs**
 - 手动重新部署：控制台右上角 **Manual Deploy** → **Deploy latest commit**
