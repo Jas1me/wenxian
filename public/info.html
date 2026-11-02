@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#f5f6f8">
+<title>NeuroSearch 项目信息</title>
+<style>
+:root{
+  --bg:#f5f6f8; --card:#ffffff; --line:#e6e8ec;
+  --text:#1b1f24; --muted:#6b7280; --accent:#185fa5;
+  --ok:#0f6e56; --okbg:#e1f5ee; --warn:#854f0b; --warnbg:#faeeda;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{
+  background:var(--bg); color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  font-size:16px; line-height:1.65;
+  padding:20px 16px calc(32px + env(safe-area-inset-bottom));
+  max-width:640px; margin:0 auto;
+}
+h1{font-size:21px; font-weight:600; letter-spacing:-.01em}
+h2{font-size:15px; font-weight:600; margin-bottom:10px; color:var(--text)}
+p{font-size:14px; color:var(--muted)}
+.top{margin-bottom:20px}
+.badge{
+  display:inline-flex; align-items:center; gap:6px;
+  background:var(--okbg); color:var(--ok);
+  font-size:12.5px; padding:4px 11px; border-radius:999px; margin-top:9px;
+}
+.dot{width:6px; height:6px; border-radius:50%; background:var(--ok)}
+.sub{font-size:13px; color:var(--muted); margin-top:6px}
+.card{
+  background:var(--card); border:1px solid var(--line);
+  border-radius:14px; padding:16px; margin-bottom:12px;
+}
+.grid{display:grid; grid-template-columns:repeat(3,1fr); gap:8px}
+.metric{text-align:center; padding:6px 2px}
+.metric b{display:block; font-size:20px; font-weight:600; color:var(--accent); font-variant-numeric:tabular-nums}
+.metric span{font-size:11.5px; color:var(--muted)}
+.links{display:grid; gap:8px}
+a.btn{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:13px 15px; border-radius:11px; text-decoration:none;
+  background:#f7f8fa; border:1px solid var(--line);
+  color:var(--text); font-size:14.5px; font-weight:500;
+  -webkit-tap-highlight-color:transparent;
+}
+a.btn:active{background:#eef1f5}
+a.btn.primary{background:var(--accent); border-color:var(--accent); color:#fff}
+a.btn.primary .hint{color:rgba(255,255,255,.75)}
+.hint{font-size:12px; color:var(--muted); font-weight:400}
+ol,ul{padding-left:19px}
+li{font-size:14px; color:var(--muted); margin-bottom:8px}
+li b{color:var(--text); font-weight:600}
+code{
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+  font-size:12.5px; background:#f1f3f6; padding:2px 5px;
+  border-radius:5px; color:#334155; word-break:break-all;
+}
+.warn{
+  background:var(--warnbg); border:1px solid #f2dfb8;
+  border-radius:11px; padding:12px 14px; margin-top:10px;
+}
+.warn p{color:var(--warn); font-size:13px}
+footer{text-align:center; font-size:12px; color:#9aa1ab; margin-top:22px; line-height:1.9}
+</style>
+</head>
+<body>
+
+<div class="top">
+  <h1>NeuroSearch 项目信息</h1>
+  <div class="badge"><span class="dot"></span><span id="stateText">正在读取状态…</span></div>
+  <p class="sub">医学文献检索系统 · 部署于 Render</p>
+</div>
+
+<div class="card">
+  <h2>实时数据</h2>
+  <div class="grid">
+    <div class="metric"><b id="mTotal">—</b><span>篇文献</span></div>
+    <div class="metric"><b id="mSources">—</b><span>个期刊</span></div>
+    <div class="metric"><b id="mYears">—</b><span>年份跨度</span></div>
+  </div>
+</div>
+
+<div class="card">
+  <h2>快速跳转</h2>
+  <div class="links">
+    <a class="btn primary" href="/">
+      <span>打开文献检索</span><span class="hint">首页 →</span>
+    </a>
+    <a class="btn" href="https://github.com/Jas1me/wenxian" target="_blank" rel="noopener">
+      <span>源代码仓库</span><span class="hint">GitHub →</span>
+    </a>
+    <a class="btn" href="https://github.com/Jas1me/wenxian/blob/main/DEPLOY.md" target="_blank" rel="noopener">
+      <span>完整维护手册</span><span class="hint">DEPLOY.md →</span>
+    </a>
+    <a class="btn" href="https://dashboard.render.com/web/srv-dbi79noae00c73be5410" target="_blank" rel="noopener">
+      <span>部署控制台</span><span class="hint">Render →</span>
+    </a>
+  </div>
+</div>
+
+<div class="card">
+  <h2>怎么更新内容</h2>
+  <ol>
+    <li><b>改文件</b>：本地 <code>C:\Users\User\Desktop\neurosearch</code> 下修改，新文件直接覆盖同名文件，不要改名</li>
+    <li><b>加文献</b>：写进 <code>server/seed.py</code> 的 <code>SEED_ARTICLES</code> 列表（第 39 行起），不要用网页表单加</li>
+    <li><b>部署</b>：推送代码后要手动触发一次重新部署，约 40 秒完成，<b>网址永远不变</b></li>
+  </ol>
+  <div class="warn">
+    <p>自动部署实测不生效（Render 用 OAuth 连接，收不到推送事件）。改完代码如果不触发部署，网站不会变。</p>
+  </div>
+</div>
+
+<div class="card">
+  <h2>几点须知</h2>
+  <ul>
+    <li><b>冷启动</b>：15 分钟无人访问会休眠，下次打开等 30–50 秒，不是卡死</li>
+    <li><b>数据不持久</b>：服务重启后 SQLite 重置，但 144 篇种子文献会自动重建</li>
+    <li><b>仓库是公开的</b>：Render 用 OAuth 读不了私有仓库，改成私有会导致无法自动拉取代码</li>
+  </ul>
+</div>
+
+<footer>
+  神经发育障碍文献检索 · 干预与康复 / 儿童早期筛查 / 基因检测与诊断<br>
+  最后更新 2026-11-02
+</footer>
+
+<script>
+(function () {
+  var elTotal = document.getElementById('mTotal');
+  var elSources = document.getElementById('mSources');
+  var elYears = document.getElementById('mYears');
+  var elState = document.getElementById('stateText');
+
+  function setState(t) { elState.textContent = t; }
+
+  var ctrl = window.AbortController ? new AbortController() : null;
+  var timer = setTimeout(function () { if (ctrl) ctrl.abort(); }, 20000);
+
+  fetch('/api/stats', ctrl ? { signal: ctrl.signal } : {})
+    .then(function (r) { return r.json(); })
+    .then(function (d) {
+      clearTimeout(timer);
+      elTotal.textContent = d.total;
+      elSources.textContent = d.sources;
+      elYears.textContent = (d.year_min || '') + '–' + (d.year_max || '');
+      setState('服务运行中');
+    })
+    .catch(function () {
+      clearTimeout(timer);
+      setState('服务可能正在冷启动');
+    });
+})();
+</script>
+</body>
+</html>
