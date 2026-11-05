@@ -95,6 +95,9 @@ Render 控制台：https://dashboard.render.com/web/srv-dbi79noae00c73be5410
    ```
 2. **自动部署不生效**，推送后必须手动触发一次部署（控制台或 API），否则网站不变。
 
+3. **维护脚本里的路径是写死的**（`C:\Users\User\Desktop\neurosearch`）。
+   新电脑如果目录不同，打开 `scripts/*.py`，改文件顶部的 `PROJ` / `BASE` / `SEED` 常量即可，逻辑不用动。
+
 新电脑如果是正常的网络环境，直接 `git push` 即可，不受这两条限制。
 
 ## 五、备份建议（3 分钟做完）
