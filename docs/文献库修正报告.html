@@ -1,0 +1,1409 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>文献库修正报告 · 259 处已改完</title>
+<style>
+  :root { --ink:#1a1a1a; --sub:#5f6673; --line:#e6e8ec; --bg:#f7f8fa; --card:#fff;
+           --red:#c0392b; --amber:#b7791f; --green:#1e7f4f; --blue:#2563a8; }
+  * { box-sizing:border-box; -webkit-text-size-adjust:100%; }
+  body { margin:0; background:var(--bg); color:var(--ink);
+         font:15px/1.65 -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif; }
+  .wrap { max-width:1180px; margin:0 auto; padding:28px 18px 70px; }
+  header h1 { font-size:26px; margin:0 0 6px; letter-spacing:-.3px; }
+  header .meta { color:var(--sub); font-size:13px; }
+  .hero { display:flex; gap:14px; flex-wrap:wrap; margin:22px 0 8px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:12px;
+          padding:16px 18px; flex:1 1 150px; }
+  .card .n { font-size:30px; font-weight:650; letter-spacing:-1px; }
+  .card .l { color:var(--sub); font-size:12.5px; margin-top:2px; }
+  .card.ok .n { color:var(--green); }
+  .note { background:#fff; border:1px solid var(--line); border-left:3px solid var(--green);
+          border-radius:8px; padding:14px 18px; margin:20px 0; font-size:14px; }
+  .note b { color:var(--green); }
+  .grp { background:#fff; border:1px solid var(--line); border-radius:12px; padding:18px 20px 8px; margin:0 0 18px; }
+  .grp h2 { font-size:16px; margin:0 0 4px; display:flex; align-items:center; gap:8px; }
+  .tag { font-size:12px; padding:2px 9px; border-radius:20px; color:#fff; }
+  .tag-ok { background:var(--green); }
+  .cnt { color:var(--sub); font-size:12.5px; font-weight:400; }
+  .desc { color:var(--sub); font-size:13px; margin:4px 0 12px; }
+  .tw { overflow-x:auto; -webkit-overflow-scrolling:touch; }
+  table { border-collapse:collapse; width:100%; font-size:13px; min-width:820px; }
+  th { text-align:left; color:var(--sub); font-weight:550; font-size:12px;
+       border-bottom:1px solid var(--line); padding:8px 10px 8px 0; white-space:nowrap; }
+  td { border-bottom:1px solid #f1f2f5; padding:9px 10px 9px 0; vertical-align:top; }
+  tr:last-child td { border-bottom:none; }
+  .c-id { width:38px; color:var(--sub); font-variant-numeric:tabular-nums; }
+  .c-ti { min-width:200px; color:#33383f; }
+  .old { color:var(--red); text-decoration:line-through; text-decoration-color:#e3b4ae; }
+  .new { color:var(--green); }
+  footer { color:var(--sub); font-size:12.5px; margin-top:26px; line-height:1.9; }
+  @media (max-width:560px) {
+    .wrap { padding:20px 12px 60px; }
+    header h1 { font-size:21px; }
+    .card .n { font-size:24px; }
+    table { font-size:12px; min-width:700px; }
+  }
+</style></head><body><div class="wrap">
+<header>
+  <h1>文献库修正报告</h1>
+  <div class="meta">对象：NeuroSearch 的 144 篇文献 · 依据：Crossref / doi.org 全局解析 / Europe PMC（PubMed 镜像）</div>
+</header>
+
+<div class="hero">
+  <div class="card ok"><div class="n">259</div><div class="l">处字段已修正</div></div>
+  <div class="card"><div class="n">112</div><div class="l">篇文献被修改</div></div>
+  <div class="card ok"><div class="n">140<span style="font-size:15px;color:#8b93a1">/144</span></div>
+    <div class="l">DOI 通过全局解析</div></div>
+  <div class="card ok"><div class="n">125</div><div class="l">补上权威 PMID</div></div>
+  <div class="card ok"><div class="n">0</div><div class="l">重复 / 无效字段</div></div>
+</div>
+
+<div class="note">
+  <b>已全部写入并上线。</b>逐条复检结果：140 个 DOI 全部能在 doi.org 解析；
+  125 个 PMID 全部存在、且标题与原文一致（0 处错号）；DOI / PMID / 标题均无重复；
+  144 篇全部有可点击的有效链接。剩余 4 篇本身没有 DOI（如 NCAEP 报告、AHRQ 报告），
+  19 篇未被 PubMed 收录（中文期刊、专著、部分新刊），这些条目走出版社原始链接，链接均已实测可打开。
+</div>
+
+  <section class="grp">
+    <h2><span class="tag tag-ok">标题</span><span class="cnt">6 处</span></h2>
+    <p class="desc">标题被改写、截断，与原文不一致</p>
+    <div class="tw"><table>
+      <thead><tr><th class="c-id">#</th><th>文献</th><th>修改前</th><th>修改后</th></tr></thead>
+      <tbody><tr>
+      <td class="c-id">3</td>
+      <td class="c-ti" title="Early intensive behavioral intervention (EIBI) for young children with autism spectrum disorders (ASD)">Early intensive behavioral intervention (EIBI) for young c…</td>
+      <td class="old">Early intensive behavioral intervention (EIBI) for increasing functional b…</td>
+      <td class="new">Early intensive behavioral intervention (EIBI) for young children with aut…</td>
+    </tr><tr>
+      <td class="c-id">7</td>
+      <td class="c-ti" title="Applied behavior analytic intervention for autism in early childhood: meta-analysis, meta-regression and dose-response meta-analysis of multiple outcomes">Applied behavior analytic intervention for autism in early…</td>
+      <td class="old">Applied behavior analytic intervention for autism in early childhood: meta…</td>
+      <td class="new">Applied behavior analytic intervention for autism in early childhood: meta…</td>
+    </tr><tr>
+      <td class="c-id">76</td>
+      <td class="c-ti" title="Long-term outcomes of parent-assisted social skills intervention for high-functioning children with autism spectrum disorder: the UCLA PEERS program">Long-term outcomes of parent-assisted social skills interv…</td>
+      <td class="old">Long-term outcomes of parent-assisted social skills training for adolescen…</td>
+      <td class="new">Long-term outcomes of parent-assisted social skills intervention for high-…</td>
+    </tr><tr>
+      <td class="c-id">91</td>
+      <td class="c-ti" title="Social skills training for young adults with high-functioning autism spectrum disorders: a randomized controlled pilot study">Social skills training for young adults with high-function…</td>
+      <td class="old">Caregiver-assisted social skills training for young adults with autism spe…</td>
+      <td class="new">Social skills training for young adults with high-functioning autism spect…</td>
+    </tr><tr>
+      <td class="c-id">114</td>
+      <td class="c-ti" title="Randomized, controlled, crossover trial of methylphenidate in pervasive developmental disorders with hyperactivity">Randomized, controlled, crossover trial of methylphenidate…</td>
+      <td class="old">Randomized, placebo-controlled, crossover study of methylphenidate for ADH…</td>
+      <td class="new">Randomized, controlled, crossover trial of methylphenidate in pervasive de…</td>
+    </tr><tr>
+      <td class="c-id">117</td>
+      <td class="c-ti" title="Internet-Based, Randomized, Controlled Trial of Omega-3 Fatty Acids for Hyperactivity in Autism">Internet-Based, Randomized, Controlled Trial of Omega-3 Fa…</td>
+      <td class="old">Internet-based, randomized, placebo-controlled trial of omega-3 fatty acid…</td>
+      <td class="new">Internet-Based, Randomized, Controlled Trial of Omega-3 Fatty Acids for Hy…</td>
+    </tr></tbody></table></div></section>
+  <section class="grp">
+    <h2><span class="tag tag-ok">作者</span><span class="cnt">8 处</span></h2>
+    <p class="desc">作者张冠李戴，或残留 “(multiauthor)” 占位符</p>
+    <div class="tw"><table>
+      <thead><tr><th class="c-id">#</th><th>文献</th><th>修改前</th><th>修改后</th></tr></thead>
+      <tbody><tr>
+      <td class="c-id">37</td>
+      <td class="c-ti" title="Developmental social pragmatic interventions for preschoolers with autism spectrum disorder: a systematic review">Developmental social pragmatic interventions for preschool…</td>
+      <td class="old">Binns A, Orom Cardy J</td>
+      <td class="new">Binns AV, Oram Cardy J</td>
+    </tr><tr>
+      <td class="c-id">47</td>
+      <td class="c-ti" title="Autism and Its Lookalikes: A Case Report of a Child Whose Autism Diagnosis No Longer Fit Years Later">Autism and Its Lookalikes: A Case Report of a Child Whose …</td>
+      <td class="old">Okoye C, Obialo-Ibeawuchi CM, Obajeun O, et al.</td>
+      <td class="new">Kim E, Hong JS</td>
+    </tr><tr>
+      <td class="c-id">51</td>
+      <td class="c-ti" title="Bridging the gap: autism spectrum disorder in children in the United States and worldwide: a narrative review">Bridging the gap: autism spectrum disorder in children in …</td>
+      <td class="old">(multiauthor)</td>
+      <td class="new">Kadam SJ, Goel M</td>
+    </tr><tr>
+      <td class="c-id">63</td>
+      <td class="c-ti" title="Challenges to high-quality care in autism with functional somatic symptoms: A case-inspired narrative review and exploratory biopsychosocial model">Challenges to high-quality care in autism with functional …</td>
+      <td class="old">(multiauthor)</td>
+      <td class="new">Zotti L, Esposito D, Di Iorio G, et al.</td>
+    </tr><tr>
+      <td class="c-id">88</td>
+      <td class="c-ti" title="A Systematic Review of Virtual Reality vs. Standard Social Skills Training for Improving Social Interaction Skills and Reducing Social Anxiety in Children With Autism Spectrum Disorder">A Systematic Review of Virtual Reality vs. Standard Social…</td>
+      <td class="old">(multiauthor)</td>
+      <td class="new">Idowu O, Aderinto N, Olatunji G, Kokori E</td>
+    </tr><tr>
+      <td class="c-id">105</td>
+      <td class="c-ti" title="The use of social robots with children and young people on the autism spectrum: a systematic review and meta-analysis">The use of social robots with children and young people on…</td>
+      <td class="old">(multiauthor)</td>
+      <td class="new">Kouroupa A, Laws KR, Irvine K, et al.</td>
+    </tr><tr>
+      <td class="c-id">129</td>
+      <td class="c-ti" title="Telehealth parent training for challenging behavior in children with developmental disabilities: a meta-analysis">Telehealth parent training for challenging behavior in chi…</td>
+      <td class="old">Frazier TW, Vance JK, Dapretto M, Kasari C</td>
+      <td class="new">Adedipe DT, Walton KM</td>
+    </tr><tr>
+      <td class="c-id">141</td>
+      <td class="c-ti" title="A systematic review and meta-analysis of mental health outcomes associated with camouflaging in autistic people">A systematic review and meta-analysis of mental health out…</td>
+      <td class="old">(multiauthor)</td>
+      <td class="new">Khudiakova V, Russell E, Sowden-Carvalho S, Surtees A</td>
+    </tr></tbody></table></div></section>
+  <section class="grp">
+    <h2><span class="tag tag-ok">期刊</span><span class="cnt">8 处</span></h2>
+    <p class="desc">期刊名写成别的刊物，或残留占位符</p>
+    <div class="tw"><table>
+      <thead><tr><th class="c-id">#</th><th>文献</th><th>修改前</th><th>修改后</th></tr></thead>
+      <tbody><tr>
+      <td class="c-id">47</td>
+      <td class="c-ti" title="Autism and Its Lookalikes: A Case Report of a Child Whose Autism Diagnosis No Longer Fit Years Later">Autism and Its Lookalikes: A Case Report of a Child Whose …</td>
+      <td class="old">Clinical Case Reports (PMC)</td>
+      <td class="new">Case Reports in Psychiatry</td>
+    </tr><tr>
+      <td class="c-id">51</td>
+      <td class="c-ti" title="Bridging the gap: autism spectrum disorder in children in the United States and worldwide: a narrative review">Bridging the gap: autism spectrum disorder in children in …</td>
+      <td class="old">PubMed-indexed journal</td>
+      <td class="new">Clinical and Experimental Pediatrics</td>
+    </tr><tr>
+      <td class="c-id">63</td>
+      <td class="c-ti" title="Challenges to high-quality care in autism with functional somatic symptoms: A case-inspired narrative review and exploratory biopsychosocial model">Challenges to high-quality care in autism with functional …</td>
+      <td class="old">PubMed-indexed journal</td>
+      <td class="new">Clinical Child Psychology and Psychiatry</td>
+    </tr><tr>
+      <td class="c-id">68</td>
+      <td class="c-ti" title="The gluten-free/casein-free diet: a double-blind challenge trial in children with autism">The gluten-free/casein-free diet: a double-blind challenge…</td>
+      <td class="old">The Journal of Pediatrics</td>
+      <td class="new">Journal of Autism and Developmental Disorders</td>
+    </tr><tr>
+      <td class="c-id">76</td>
+      <td class="c-ti" title="Long-term outcomes of parent-assisted social skills intervention for high-functioning children with autism spectrum disorder: the UCLA PEERS program">Long-term outcomes of parent-assisted social skills interv…</td>
+      <td class="old">Journal of the American Academy of Child and Adolescent Psychiatry</td>
+      <td class="new">Autism</td>
+    </tr><tr>
+      <td class="c-id">99</td>
+      <td class="c-ti" title="Randomized comparison of two communication interventions for preschoolers with autism spectrum disorders">Randomized comparison of two communication interventions f…</td>
+      <td class="old">Journal of Autism and Developmental Disorders</td>
+      <td class="new">Journal of Consulting and Clinical Psychology</td>
+    </tr><tr>
+      <td class="c-id">117</td>
+      <td class="c-ti" title="Internet-Based, Randomized, Controlled Trial of Omega-3 Fatty Acids for Hyperactivity in Autism">Internet-Based, Randomized, Controlled Trial of Omega-3 Fa…</td>
+      <td class="old">Journal of Autism and Developmental Disorders</td>
+      <td class="new">Journal of the American Academy of Child and Adolescent Psychiatry</td>
+    </tr><tr>
+      <td class="c-id">129</td>
+      <td class="c-ti" title="Telehealth parent training for challenging behavior in children with developmental disabilities: a meta-analysis">Telehealth parent training for challenging behavior in chi…</td>
+      <td class="old">Journal of Autism and Developmental Disorders</td>
+      <td class="new">Review Journal of Autism and Developmental Disorders</td>
+    </tr></tbody></table></div></section>
+  <section class="grp">
+    <h2><span class="tag tag-ok">年份</span><span class="cnt">3 处</span></h2>
+    <p class="desc">发表年份与原文不符</p>
+    <div class="tw"><table>
+      <thead><tr><th class="c-id">#</th><th>文献</th><th>修改前</th><th>修改后</th></tr></thead>
+      <tbody><tr>
+      <td class="c-id">47</td>
+      <td class="c-ti" title="Autism and Its Lookalikes: A Case Report of a Child Whose Autism Diagnosis No Longer Fit Years Later">Autism and Its Lookalikes: A Case Report of a Child Whose …</td>
+      <td class="old">2025</td>
+      <td class="new">2026</td>
+    </tr><tr>
+      <td class="c-id">72</td>
+      <td class="c-ti" title="Cognitive behavioral therapy for anxiety in children with autism spectrum disorders: a randomized, controlled trial">Cognitive behavioral therapy for anxiety in children with …</td>
+      <td class="old">2015</td>
+      <td class="new">2009</td>
+    </tr><tr>
+      <td class="c-id">76</td>
+      <td class="c-ti" title="Long-term outcomes of parent-assisted social skills intervention for high-functioning children with autism spectrum disorder: the UCLA PEERS program">Long-term outcomes of parent-assisted social skills interv…</td>
+      <td class="old">2012</td>
+      <td class="new">2014</td>
+    </tr></tbody></table></div></section>
+  <section class="grp">
+    <h2><span class="tag tag-ok">DOI</span><span class="cnt">51 处</span></h2>
+    <p class="desc">DOI 在 doi.org 全局解析里查不到、或指向了另一篇论文</p>
+    <div class="tw"><table>
+      <thead><tr><th class="c-id">#</th><th>文献</th><th>修改前</th><th>修改后</th></tr></thead>
+      <tbody><tr>
+      <td class="c-id">7</td>
+      <td class="c-ti" title="Applied behavior analytic intervention for autism in early childhood: meta-analysis, meta-regression and dose-response meta-analysis of multiple outcomes">Applied behavior analytic intervention for autism in early…</td>
+      <td class="old">10.1016/j.cpr.2010.01.003</td>
+      <td class="new">10.1016/j.cpr.2010.01.008</td>
+    </tr><tr>
+      <td class="c-id">9</td>
+      <td class="c-ti" title="Long-term outcomes of early intervention in 6-year-old children with autism spectrum disorder (ESDM 随访)">Long-term outcomes of early intervention in 6-year-old chi…</td>
+      <td class="old">10.1016/j.jaac.2015.05.002</td>
+      <td class="new">10.1016/j.jaac.2015.04.005</td>
+    </tr><tr>
+      <td class="c-id">10</td>
+      <td class="c-ti" title="Autism treatment in the first year of life: a pilot study of Infant Start, a parent-implemented intervention for symptomatic infants">Autism treatment in the first year of life: a pilot study …</td>
+      <td class="old">10.1007/s10803-014-2234-2</td>
+      <td class="new">10.1007/s10803-014-2202-y</td>
+    </tr><tr>
+      <td class="c-id">11</td>
+      <td class="c-ti" title="Outcomes of children receiving Group-Early Start Denver Model in an inclusive versus autism-specific setting: a pilot randomized controlled trial">Outcomes of children receiving Group-Early Start Denver Mo…</td>
+      <td class="old">10.1177/1362361318766235</td>
+      <td class="new">10.1177/1362361318801341</td>
+    </tr><tr>
+      <td class="c-id">12</td>
+      <td class="c-ti" title="Effect of the TEACCH program on the rehabilitation of preschool children with autistic spectrum disorder: A randomized controlled trial">Effect of the TEACCH program on the rehabilitation of pres…</td>
+      <td class="old"></td>
+      <td class="new">10.1016/j.jpsychires.2021.04.025</td>
+    </tr><tr>
+      <td class="c-id">18</td>
+      <td class="c-ti" title="Meta-analysis of parent-mediated interventions for young children with autism spectrum disorder">Meta-analysis of parent-mediated interventions for young c…</td>
+      <td class="old">10.1177/1362361316674493</td>
+      <td class="new">10.1177/1362361316677838</td>
+    </tr><tr>
+      <td class="c-id">26</td>
+      <td class="c-ti" title="Increasing access to an ASD imitation intervention via a telehealth parent training program">Increasing access to an ASD imitation intervention via a t…</td>
+      <td class="old">10.1007/s10803-015-2478-6</td>
+      <td class="new">10.1007/s10803-014-2186-7</td>
+    </tr><tr>
+      <td class="c-id">27</td>
+      <td class="c-ti" title="A randomized controlled trial of Pivotal Response Treatment Group for parents of children with autism">A randomized controlled trial of Pivotal Response Treatmen…</td>
+      <td class="old">10.1111/jcpp.12409</td>
+      <td class="new">10.1111/jcpp.12354</td>
+    </tr><tr>
+      <td class="c-id">34</td>
+      <td class="c-ti" title="Evaluation of the relationship development intervention program">Evaluation of the relationship development intervention pr…</td>
+      <td class="old">10.1177/1362361307078519</td>
+      <td class="new">10.1177/1362361307079603</td>
+    </tr><tr>
+      <td class="c-id">35</td>
+      <td class="c-ti" title="The relation between severity of autism and caregiver-child interaction: a study in the context of relationship development intervention">The relation between severity of autism and caregiver-chil…</td>
+      <td class="old">10.1007/s10802-015-0067-x</td>
+      <td class="new">10.1007/s10802-015-0067-y</td>
+    </tr><tr>
+      <td class="c-id">36</td>
+      <td class="c-ti" title="Learning through interaction in children with autism: preliminary data from a social-communication-based intervention (DSP 模型前身)">Learning through interaction in children with autism: prel…</td>
+      <td class="old">10.1177/1362361311413396</td>
+      <td class="new">10.1177/1362361311422052</td>
+    </tr><tr>
+      <td class="c-id">37</td>
+      <td class="c-ti" title="Developmental social pragmatic interventions for preschoolers with autism spectrum disorder: a systematic review">Developmental social pragmatic interventions for preschool…</td>
+      <td class="old">10.1177/2396941518823559</td>
+      <td class="new">10.1177/2396941518824497</td>
+    </tr><tr>
+      <td class="c-id">42</td>
+      <td class="c-ti" title="Effects of Mozart-Orff parent-child music therapy among mothers and their preschool children with autism spectrum disorder: a mixed-methods randomised controlled trial">Effects of Mozart-Orff parent-child music therapy among mo…</td>
+      <td class="old">10.1186/s12887-024-04960-7</td>
+      <td class="new">10.1186/s12887-024-05085-3</td>
+    </tr><tr>
+      <td class="c-id">47</td>
+      <td class="c-ti" title="Autism and Its Lookalikes: A Case Report of a Child Whose Autism Diagnosis No Longer Fit Years Later">Autism and Its Lookalikes: A Case Report of a Child Whose …</td>
+      <td class="old"></td>
+      <td class="new">10.1155/crps/8279416</td>
+    </tr><tr>
+      <td class="c-id">50</td>
+      <td class="c-ti" title="The Increasing Prevalence of Autism Spectrum Disorder in the U.S. and Its Implications for Pediatric Micronutrient Status: A Narrative Review of Case Reports and Series">The Increasing Prevalence of Autism Spectrum Disorder in t…</td>
+      <td class="old"></td>
+      <td class="new">10.3390/nu17060990</td>
+    </tr><tr>
+      <td class="c-id">51</td>
+      <td class="c-ti" title="Bridging the gap: autism spectrum disorder in children in the United States and worldwide: a narrative review">Bridging the gap: autism spectrum disorder in children in …</td>
+      <td class="old"></td>
+      <td class="new">10.3345/cep.2025.00969</td>
+    </tr><tr>
+      <td class="c-id">57</td>
+      <td class="c-ti" title="Rare CACNA1H and RELN variants interact through mTORC1 pathway in oligogenic autism spectrum disorder">Rare CACNA1H and RELN variants interact through mTORC1 pat…</td>
+      <td class="old">10.1038/s41398-022-01882-2</td>
+      <td class="new">10.1038/s41398-022-01997-9</td>
+    </tr><tr>
+      <td class="c-id">58</td>
+      <td class="c-ti" title="Cross-level analysis of molecular and neurobehavioral function in a prospective series of patients with germline heterozygous PTEN mutations with and without autism">Cross-level analysis of molecular and neurobehavioral func…</td>
+      <td class="old">10.1186/s13229-021-00418-9</td>
+      <td class="new">10.1186/s13229-020-00406-6</td>
+    </tr><tr>
+      <td class="c-id">59</td>
+      <td class="c-ti" title="Placenta-specific CYP11A1 overexpression leads to autism-like symptoms in offspring with altered steroid hormone biosynthesis in the placenta-brain axis and rescued by vitamin D intervention">Placenta-specific CYP11A1 overexpression leads to autism-l…</td>
+      <td class="old"></td>
+      <td class="new">10.1016/j.bbi.2024.07.012</td>
+    </tr><tr>
+      <td class="c-id">60</td>
+      <td class="c-ti" title="Transcriptome study in Sicilian patients with autism spectrum disorder">Transcriptome study in Sicilian patients with autism spect…</td>
+      <td class="old"></td>
+      <td class="new">10.3390/biomedicines12071402</td>
+    </tr><tr>
+      <td class="c-id">61</td>
+      <td class="c-ti" title="Immune signature of gene expression pattern shared by autism spectrum disorder and Huntington&#x27;s disease">Immune signature of gene expression pattern shared by auti…</td>
+      <td class="old"></td>
+      <td class="new">10.1016/j.ibneur.2024.09.004</td>
+    </tr><tr>
+      <td class="c-id">62</td>
+      <td class="c-ti" title="AI-assisted early screening, diagnosis, and intervention for autism in young children">AI-assisted early screening, diagnosis, and intervention f…</td>
+      <td class="old"></td>
+      <td class="new">10.3389/fpsyt.2025.1513809</td>
+    </tr><tr>
+      <td class="c-id">63</td>
+      <td class="c-ti" title="Challenges to high-quality care in autism with functional somatic symptoms: A case-inspired narrative review and exploratory biopsychosocial model">Challenges to high-quality care in autism with functional …</td>
+      <td class="old"></td>
+      <td class="new">10.1177/13591045251343692</td>
+    </tr><tr>
+      <td class="c-id">64</td>
+      <td class="c-ti" title="Evaluation of an artificial intelligence-based medical device for diagnosis of autism spectrum disorder">Evaluation of an artificial intelligence-based medical dev…</td>
+      <td class="old">10.1038/s41746-022-00565-6</td>
+      <td class="new">10.1038/s41746-022-00598-6</td>
+    </tr><tr>
+      <td class="c-id">68</td>
+      <td class="c-ti" title="The gluten-free/casein-free diet: a double-blind challenge trial in children with autism">The gluten-free/casein-free diet: a double-blind challenge…</td>
+      <td class="old">10.1016/j.jpeds.2016.04.033</td>
+      <td class="new">10.1007/s10803-015-2564-9</td>
+    </tr><tr>
+      <td class="c-id">72</td>
+      <td class="c-ti" title="Cognitive behavioral therapy for anxiety in children with autism spectrum disorders: a randomized, controlled trial">Cognitive behavioral therapy for anxiety in children with …</td>
+      <td class="old"></td>
+      <td class="new">10.1111/j.1469-7610.2008.01948.x</td>
+    </tr><tr>
+      <td class="c-id">73</td>
+      <td class="c-ti" title="Intranasal oxytocin treatment for social deficits and biomarkers of response in children with autism">Intranasal oxytocin treatment for social deficits and biom…</td>
+      <td class="old">10.1073/pnas.1705971114</td>
+      <td class="new">10.1073/pnas.1705521114</td>
+    </tr><tr>
+      <td class="c-id">74</td>
+      <td class="c-ti" title="An intervention for sensory difficulties in children with autism: a randomized trial (Ayres Sensory Integration)">An intervention for sensory difficulties in children with …</td>
+      <td class="old"></td>
+      <td class="new">10.1007/s10803-013-1983-8</td>
+    </tr><tr>
+      <td class="c-id">75</td>
+      <td class="c-ti" title="Joint attention and symbolic play in young children with autism: a randomized controlled intervention study (JASPER)">Joint attention and symbolic play in young children with a…</td>
+      <td class="old"></td>
+      <td class="new">10.1111/j.1469-7610.2005.01567.x</td>
+    </tr><tr>
+      <td class="c-id">76</td>
+      <td class="c-ti" title="Long-term outcomes of parent-assisted social skills intervention for high-functioning children with autism spectrum disorder: the UCLA PEERS program">Long-term outcomes of parent-assisted social skills interv…</td>
+      <td class="old"></td>
+      <td class="new">10.1177/1362361312472403</td>
+    </tr><tr>
+      <td class="c-id">88</td>
+      <td class="c-ti" title="A Systematic Review of Virtual Reality vs. Standard Social Skills Training for Improving Social Interaction Skills and Reducing Social Anxiety in Children With Autism Spectrum Disorder">A Systematic Review of Virtual Reality vs. Standard Social…</td>
+      <td class="old"></td>
+      <td class="new">10.1192/bjo.2024.171</td>
+    </tr><tr>
+      <td class="c-id">90</td>
+      <td class="c-ti" title="RCT of a manualized social treatment for high-functioning autism spectrum disorders">RCT of a manualized social treatment for high-functioning …</td>
+      <td class="old">10.1007/s10803-010-0995-1</td>
+      <td class="new">10.1007/s10803-010-0989-8</td>
+    </tr><tr>
+      <td class="c-id">91</td>
+      <td class="c-ti" title="Social skills training for young adults with high-functioning autism spectrum disorders: a randomized controlled pilot study">Social skills training for young adults with high-function…</td>
+      <td class="old"></td>
+      <td class="new">10.1007/s10803-011-1380-0</td>
+    </tr><tr>
+      <td class="c-id">96</td>
+      <td class="c-ti" title="Augmentative and Alternative Communication and Speech Production for Individuals with ASD: A Systematic Review">Augmentative and Alternative Communication and Speech Prod…</td>
+      <td class="old">10.1007/s10803-020-04743-5</td>
+      <td class="new">10.1007/s10803-021-04868-2</td>
+    </tr><tr>
+      <td class="c-id">98</td>
+      <td class="c-ti" title="The impact of augmentative and alternative communication intervention on the speech production of individuals with developmental disabilities: a research review">The impact of augmentative and alternative communication i…</td>
+      <td class="old"></td>
+      <td class="new">10.1044/1092-4388(2006/021)</td>
+    </tr><tr>
+      <td class="c-id">99</td>
+      <td class="c-ti" title="Randomized comparison of two communication interventions for preschoolers with autism spectrum disorders">Randomized comparison of two communication interventions f…</td>
+      <td class="old"></td>
+      <td class="new">10.1037/0022-006x.74.3.426</td>
+    </tr><tr>
+      <td class="c-id">100</td>
+      <td class="c-ti" title="Language outcome in autism: randomized comparison of joint attention and play interventions">Language outcome in autism: randomized comparison of joint…</td>
+      <td class="old"></td>
+      <td class="new">10.1037/0022-006x.76.1.125</td>
+    </tr><tr>
+      <td class="c-id">101</td>
+      <td class="c-ti" title="Randomized controlled caregiver mediated joint engagement intervention for toddlers with autism">Randomized controlled caregiver mediated joint engagement …</td>
+      <td class="old"></td>
+      <td class="new">10.1007/s10803-010-0955-5</td>
+    </tr><tr>
+      <td class="c-id">102</td>
+      <td class="c-ti" title="Intervention targeting development of socially synchronous engagement in toddlers with autism spectrum disorder: a randomized controlled trial">Intervention targeting development of socially synchronous…</td>
+      <td class="old"></td>
+      <td class="new">10.1111/j.1469-7610.2010.02288.x</td>
+    </tr><tr>
+      <td class="c-id">103</td>
+      <td class="c-ti" title="Preschool deployment of evidence-based social communication intervention: JASPER in the classroom">Preschool deployment of evidence-based social communicatio…</td>
+      <td class="old">10.1007/s10803-016-2712-2</td>
+      <td class="new">10.1007/s10803-016-2752-2</td>
+    </tr><tr>
+      <td class="c-id">104</td>
+      <td class="c-ti" title="Effects of joint attention mediated learning for toddlers with autism spectrum disorders: an initial randomized controlled study">Effects of joint attention mediated learning for toddlers …</td>
+      <td class="old"></td>
+      <td class="new">10.1016/j.ecresq.2012.06.006</td>
+    </tr><tr>
+      <td class="c-id">108</td>
+      <td class="c-ti" title="The effectiveness of Picture Exchange Communication System (PECS) training for teachers of children with autism: a pragmatic, group randomized controlled trial">The effectiveness of Picture Exchange Communication System…</td>
+      <td class="old">10.1111/j.1469-7610.2007.01712.x</td>
+      <td class="new">10.1111/j.1469-7610.2006.01707.x</td>
+    </tr><tr>
+      <td class="c-id">113</td>
+      <td class="c-ti" title="Animal-assisted intervention for autism spectrum disorder: a systematic literature review">Animal-assisted intervention for autism spectrum disorder:…</td>
+      <td class="old">10.1007/s10803-012-1701-5</td>
+      <td class="new">10.1007/s10803-012-1707-5</td>
+    </tr><tr>
+      <td class="c-id">117</td>
+      <td class="c-ti" title="Internet-Based, Randomized, Controlled Trial of Omega-3 Fatty Acids for Hyperactivity in Autism">Internet-Based, Randomized, Controlled Trial of Omega-3 Fa…</td>
+      <td class="old">10.1007/s10803-013-1880-1</td>
+      <td class="new">10.1016/j.jaac.2014.01.018</td>
+    </tr><tr>
+      <td class="c-id">119</td>
+      <td class="c-ti" title="A randomised-controlled trial of vitamin D and omega-3 long chain polyunsaturated fatty acids in the treatment of core symptoms of autism spectrum disorder in children">A randomised-controlled trial of vitamin D and omega-3 lon…</td>
+      <td class="old">10.1007/s10803-018-3860-0</td>
+      <td class="new">10.1007/s10803-018-3860-y</td>
+    </tr><tr>
+      <td class="c-id">124</td>
+      <td class="c-ti" title="Pharmacological and non-pharmacological interventions for irritability in autism spectrum disorder: a systematic review and meta-analysis with the GRADE assessment">Pharmacological and non-pharmacological interventions for …</td>
+      <td class="old">10.1186/s13229-024-00594-8</td>
+      <td class="new">10.1186/s13229-024-00585-6</td>
+    </tr><tr>
+      <td class="c-id">127</td>
+      <td class="c-ti" title="Comparison of the efficacy of parent-mediated NDBIs on developmental skills in children with ASD and fidelity in parents: a systematic review and network meta-analysis">Comparison of the efficacy of parent-mediated NDBIs on dev…</td>
+      <td class="old">10.1186/s12887-024-04708-y</td>
+      <td class="new">10.1186/s12887-024-04752-9</td>
+    </tr><tr>
+      <td class="c-id">128</td>
+      <td class="c-ti" title="Digital interventions for autism spectrum disorders: a systematic review and meta-analysis">Digital interventions for autism spectrum disorders: a sys…</td>
+      <td class="old">10.1002/pe4.12417</td>
+      <td class="new">10.1002/ped4.12417</td>
+    </tr><tr>
+      <td class="c-id">130</td>
+      <td class="c-ti" title="Nature-based interventions for autistic children: a systematic review and meta-analysis">Nature-based interventions for autistic children: a system…</td>
+      <td class="old">10.1001/jamanetworkopen.2023.44212</td>
+      <td class="new">10.1001/jamanetworkopen.2023.46715</td>
+    </tr><tr>
+      <td class="c-id">134</td>
+      <td class="c-ti" title="Parent-mediated intervention versus no intervention for infants at high risk of autism: a parallel, single-blind, randomised trial (iBASIS-VIPP)">Parent-mediated intervention versus no intervention for in…</td>
+      <td class="old">10.1016/S2215-0366(14)70356-7</td>
+      <td class="new">10.1016/S2215-0366(14)00091-1</td>
+    </tr><tr>
+      <td class="c-id">141</td>
+      <td class="c-ti" title="A systematic review and meta-analysis of mental health outcomes associated with camouflaging in autistic people">A systematic review and meta-analysis of mental health out…</td>
+      <td class="old"></td>
+      <td class="new">10.1016/j.rasd.2024.102492</td>
+    </tr></tbody></table></div></section>
+  <section class="grp">
+    <h2><span class="tag tag-ok">PMID</span><span class="cnt">91 处</span></h2>
+    <p class="desc">原为空，或链接里的编号指向别的文献；现已按 DOI 反查权威编号补齐</p>
+    <div class="tw"><table>
+      <thead><tr><th class="c-id">#</th><th>文献</th><th>修改前</th><th>修改后</th></tr></thead>
+      <tbody><tr>
+      <td class="c-id">1</td>
+      <td class="c-ti" title="Behavioral treatment and normal educational and intellectual functioning in young autistic children">Behavioral treatment and normal educational and intellectu…</td>
+      <td class="old"></td>
+      <td class="new">3571656</td>
+    </tr><tr>
+      <td class="c-id">2</td>
+      <td class="c-ti" title="Long-term outcome for children with autism who received early intensive behavioral treatment">Long-term outcome for children with autism who received ea…</td>
+      <td class="old"></td>
+      <td class="new">8427693</td>
+    </tr><tr>
+      <td class="c-id">3</td>
+      <td class="c-ti" title="Early intensive behavioral intervention (EIBI) for young children with autism spectrum disorders (ASD)">Early intensive behavioral intervention (EIBI) for young c…</td>
+      <td class="old"></td>
+      <td class="new">29742275</td>
+    </tr><tr>
+      <td class="c-id">4</td>
+      <td class="c-ti" title="Early intensive behavioral treatment: replication of the UCLA model in a community setting">Early intensive behavioral treatment: replication of the U…</td>
+      <td class="old"></td>
+      <td class="new">16685181</td>
+    </tr><tr>
+      <td class="c-id">5</td>
+      <td class="c-ti" title="Naturalistic Developmental Behavioral Interventions: Empirically Validated Treatments for Autism Spectrum Disorder">Naturalistic Developmental Behavioral Interventions: Empir…</td>
+      <td class="old"></td>
+      <td class="new">25737021</td>
+    </tr><tr>
+      <td class="c-id">6</td>
+      <td class="c-ti" title="Project AIM: Autism intervention meta-analysis for studies of young children">Project AIM: Autism intervention meta-analysis for studies…</td>
+      <td class="old"></td>
+      <td class="new">31763860</td>
+    </tr><tr>
+      <td class="c-id">7</td>
+      <td class="c-ti" title="Applied behavior analytic intervention for autism in early childhood: meta-analysis, meta-regression and dose-response meta-analysis of multiple outcomes">Applied behavior analytic intervention for autism in early…</td>
+      <td class="old"></td>
+      <td class="new">20223569</td>
+    </tr><tr>
+      <td class="c-id">9</td>
+      <td class="c-ti" title="Long-term outcomes of early intervention in 6-year-old children with autism spectrum disorder (ESDM 随访)">Long-term outcomes of early intervention in 6-year-old chi…</td>
+      <td class="old"></td>
+      <td class="new">26088663</td>
+    </tr><tr>
+      <td class="c-id">10</td>
+      <td class="c-ti" title="Autism treatment in the first year of life: a pilot study of Infant Start, a parent-implemented intervention for symptomatic infants">Autism treatment in the first year of life: a pilot study …</td>
+      <td class="old"></td>
+      <td class="new">25212413</td>
+    </tr><tr>
+      <td class="c-id">11</td>
+      <td class="c-ti" title="Outcomes of children receiving Group-Early Start Denver Model in an inclusive versus autism-specific setting: a pilot randomized controlled trial">Outcomes of children receiving Group-Early Start Denver Mo…</td>
+      <td class="old"></td>
+      <td class="new">30296845</td>
+    </tr><tr>
+      <td class="c-id">12</td>
+      <td class="c-ti" title="Effect of the TEACCH program on the rehabilitation of preschool children with autistic spectrum disorder: A randomized controlled trial">Effect of the TEACCH program on the rehabilitation of pres…</td>
+      <td class="old"></td>
+      <td class="new">33962129</td>
+    </tr><tr>
+      <td class="c-id">17</td>
+      <td class="c-ti" title="Parent-mediated early intervention for young children with autism spectrum disorders (ASD)">Parent-mediated early intervention for young children with…</td>
+      <td class="old"></td>
+      <td class="new">23633377</td>
+    </tr><tr>
+      <td class="c-id">18</td>
+      <td class="c-ti" title="Meta-analysis of parent-mediated interventions for young children with autism spectrum disorder">Meta-analysis of parent-mediated interventions for young c…</td>
+      <td class="old"></td>
+      <td class="new">29490483</td>
+    </tr><tr>
+      <td class="c-id">21</td>
+      <td class="c-ti" title="Caregiver-mediated intervention for low-resourced preschoolers with autism: an RCT (JASPER)">Caregiver-mediated intervention for low-resourced preschoo…</td>
+      <td class="old"></td>
+      <td class="new">24958585</td>
+    </tr><tr>
+      <td class="c-id">22</td>
+      <td class="c-ti" title="Randomized comparative efficacy study of parent-mediated interventions for toddlers with autism">Randomized comparative efficacy study of parent-mediated i…</td>
+      <td class="old"></td>
+      <td class="new">25822242</td>
+    </tr><tr>
+      <td class="c-id">25</td>
+      <td class="c-ti" title="A parent-mediated intervention to increase responsive parental behaviors and child communication in children with ASD: a randomized clinical trial">A parent-mediated intervention to increase responsive pare…</td>
+      <td class="old"></td>
+      <td class="new">22825926</td>
+    </tr><tr>
+      <td class="c-id">26</td>
+      <td class="c-ti" title="Increasing access to an ASD imitation intervention via a telehealth parent training program">Increasing access to an ASD imitation intervention via a t…</td>
+      <td class="old"></td>
+      <td class="new">25035089</td>
+    </tr><tr>
+      <td class="c-id">27</td>
+      <td class="c-ti" title="A randomized controlled trial of Pivotal Response Treatment Group for parents of children with autism">A randomized controlled trial of Pivotal Response Treatmen…</td>
+      <td class="old"></td>
+      <td class="new">25346345</td>
+    </tr><tr>
+      <td class="c-id">28</td>
+      <td class="c-ti" title="A pivotal response treatment package for children with autism spectrum disorder: an RCT">A pivotal response treatment package for children with aut…</td>
+      <td class="old"></td>
+      <td class="new">31387868</td>
+    </tr><tr>
+      <td class="c-id">31</td>
+      <td class="c-ti" title="Intervention effects on spoken-language outcomes for children with autism: a systematic review and meta-analysis">Intervention effects on spoken-language outcomes for child…</td>
+      <td class="old"></td>
+      <td class="new">27120988</td>
+    </tr><tr>
+      <td class="c-id">32</td>
+      <td class="c-ti" title="Speech prosody interventions for persons with autism spectrum disorders: a systematic review">Speech prosody interventions for persons with autism spect…</td>
+      <td class="old"></td>
+      <td class="new">32757615</td>
+    </tr><tr>
+      <td class="c-id">33</td>
+      <td class="c-ti" title="Effect of &#x27;Developmental Speech and Language Training Through Music&#x27; on speech production in children with autism spectrum disorders">Effect of &#x27;Developmental Speech and Language Training Thro…</td>
+      <td class="old"></td>
+      <td class="new">20635521</td>
+    </tr><tr>
+      <td class="c-id">35</td>
+      <td class="c-ti" title="The relation between severity of autism and caregiver-child interaction: a study in the context of relationship development intervention">The relation between severity of autism and caregiver-chil…</td>
+      <td class="old"></td>
+      <td class="new">26298470</td>
+    </tr><tr>
+      <td class="c-id">36</td>
+      <td class="c-ti" title="Learning through interaction in children with autism: preliminary data from a social-communication-based intervention (DSP 模型前身)">Learning through interaction in children with autism: prel…</td>
+      <td class="old"></td>
+      <td class="new">21949005</td>
+    </tr><tr>
+      <td class="c-id">41</td>
+      <td class="c-ti" title="Music therapy for autistic people">Music therapy for autistic people</td>
+      <td class="old"></td>
+      <td class="new">35532041</td>
+    </tr><tr>
+      <td class="c-id">42</td>
+      <td class="c-ti" title="Effects of Mozart-Orff parent-child music therapy among mothers and their preschool children with autism spectrum disorder: a mixed-methods randomised controlled trial">Effects of Mozart-Orff parent-child music therapy among mo…</td>
+      <td class="old"></td>
+      <td class="new">39415148</td>
+    </tr><tr>
+      <td class="c-id">43</td>
+      <td class="c-ti" title="Music improves social communication and auditory-motor connectivity in children with autism">Music improves social communication and auditory-motor con…</td>
+      <td class="old"></td>
+      <td class="new">30352997</td>
+    </tr><tr>
+      <td class="c-id">44</td>
+      <td class="c-ti" title="Development of the WHO caregiver skills training program for developmental disorders or delays">Development of the WHO caregiver skills training program f…</td>
+      <td class="old"></td>
+      <td class="new">31780960</td>
+    </tr><tr>
+      <td class="c-id">47</td>
+      <td class="c-ti" title="Autism and Its Lookalikes: A Case Report of a Child Whose Autism Diagnosis No Longer Fit Years Later">Autism and Its Lookalikes: A Case Report of a Child Whose …</td>
+      <td class="old"></td>
+      <td class="new">41675651</td>
+    </tr><tr>
+      <td class="c-id">51</td>
+      <td class="c-ti" title="Bridging the gap: autism spectrum disorder in children in the United States and worldwide: a narrative review">Bridging the gap: autism spectrum disorder in children in …</td>
+      <td class="old"></td>
+      <td class="new">41035244</td>
+    </tr><tr>
+      <td class="c-id">52</td>
+      <td class="c-ti" title="New advances in the diagnosis and treatment of autism spectrum disorders">New advances in the diagnosis and treatment of autism spec…</td>
+      <td class="old"></td>
+      <td class="new">38858682</td>
+    </tr><tr>
+      <td class="c-id">53</td>
+      <td class="c-ti" title="Gangliosides and cholesterol: Dual regulators of neuronal membrane framework in autism spectrum disorder">Gangliosides and cholesterol: Dual regulators of neuronal …</td>
+      <td class="old"></td>
+      <td class="new">39941090</td>
+    </tr><tr>
+      <td class="c-id">54</td>
+      <td class="c-ti" title="Screening and diagnostic tools for autism spectrum disorder: systematic review and meta-analysis">Screening and diagnostic tools for autism spectrum disorde…</td>
+      <td class="old"></td>
+      <td class="new">38484581</td>
+    </tr><tr>
+      <td class="c-id">55</td>
+      <td class="c-ti" title="Parental Perspectives on Early Life Screening and Genetic Testing for ASD: A Systematic Review">Parental Perspectives on Early Life Screening and Genetic …</td>
+      <td class="old"></td>
+      <td class="new">38353915</td>
+    </tr><tr>
+      <td class="c-id">56</td>
+      <td class="c-ti" title="Prevalence and characteristics of autism spectrum disorder among children aged 8 years — Autism and Developmental Disabilities Monitoring Network, 11 sites, United States, 2020">Prevalence and characteristics of autism spectrum disorder…</td>
+      <td class="old"></td>
+      <td class="new">36952288</td>
+    </tr><tr>
+      <td class="c-id">62</td>
+      <td class="c-ti" title="AI-assisted early screening, diagnosis, and intervention for autism in young children">AI-assisted early screening, diagnosis, and intervention f…</td>
+      <td class="old"></td>
+      <td class="new">40297334</td>
+    </tr><tr>
+      <td class="c-id">63</td>
+      <td class="c-ti" title="Challenges to high-quality care in autism with functional somatic symptoms: A case-inspired narrative review and exploratory biopsychosocial model">Challenges to high-quality care in autism with functional …</td>
+      <td class="old"></td>
+      <td class="new">40380786</td>
+    </tr><tr>
+      <td class="c-id">64</td>
+      <td class="c-ti" title="Evaluation of an artificial intelligence-based medical device for diagnosis of autism spectrum disorder">Evaluation of an artificial intelligence-based medical dev…</td>
+      <td class="old"></td>
+      <td class="new">35513550</td>
+    </tr><tr>
+      <td class="c-id">65</td>
+      <td class="c-ti" title="Risperidone in children with autism and serious behavioral problems (RUPP Autism Network)">Risperidone in children with autism and serious behavioral…</td>
+      <td class="old"></td>
+      <td class="new">12151468</td>
+    </tr><tr>
+      <td class="c-id">66</td>
+      <td class="c-ti" title="Atomoxetine, parent training, and their combination in children with autism spectrum disorder and attention-deficit/hyperactivity disorder">Atomoxetine, parent training, and their combination in chi…</td>
+      <td class="old"></td>
+      <td class="new">26506581</td>
+    </tr><tr>
+      <td class="c-id">68</td>
+      <td class="c-ti" title="The gluten-free/casein-free diet: a double-blind challenge trial in children with autism">The gluten-free/casein-free diet: a double-blind challenge…</td>
+      <td class="old"></td>
+      <td class="new">26343026</td>
+    </tr><tr>
+      <td class="c-id">69</td>
+      <td class="c-ti" title="Microbiota Transfer Therapy alters gut ecosystem and improves gastrointestinal and autism symptoms: an open-label study">Microbiota Transfer Therapy alters gut ecosystem and impro…</td>
+      <td class="old"></td>
+      <td class="new">28122648</td>
+    </tr><tr>
+      <td class="c-id">70</td>
+      <td class="c-ti" title="Long-term benefit of Microbiota Transfer Therapy on autism symptoms and gut microbiota">Long-term benefit of Microbiota Transfer Therapy on autism…</td>
+      <td class="old"></td>
+      <td class="new">30967657</td>
+    </tr><tr>
+      <td class="c-id">72</td>
+      <td class="c-ti" title="Cognitive behavioral therapy for anxiety in children with autism spectrum disorders: a randomized, controlled trial">Cognitive behavioral therapy for anxiety in children with …</td>
+      <td class="old"></td>
+      <td class="new">19309326</td>
+    </tr><tr>
+      <td class="c-id">73</td>
+      <td class="c-ti" title="Intranasal oxytocin treatment for social deficits and biomarkers of response in children with autism">Intranasal oxytocin treatment for social deficits and biom…</td>
+      <td class="old"></td>
+      <td class="new">28696286</td>
+    </tr><tr>
+      <td class="c-id">74</td>
+      <td class="c-ti" title="An intervention for sensory difficulties in children with autism: a randomized trial (Ayres Sensory Integration)">An intervention for sensory difficulties in children with …</td>
+      <td class="old"></td>
+      <td class="new">24214165</td>
+    </tr><tr>
+      <td class="c-id">75</td>
+      <td class="c-ti" title="Joint attention and symbolic play in young children with autism: a randomized controlled intervention study (JASPER)">Joint attention and symbolic play in young children with a…</td>
+      <td class="old"></td>
+      <td class="new">16712638</td>
+    </tr><tr>
+      <td class="c-id">76</td>
+      <td class="c-ti" title="Long-term outcomes of parent-assisted social skills intervention for high-functioning children with autism spectrum disorder: the UCLA PEERS program">Long-term outcomes of parent-assisted social skills interv…</td>
+      <td class="old"></td>
+      <td class="new">23996903</td>
+    </tr><tr>
+      <td class="c-id">77</td>
+      <td class="c-ti" title="Validation of the Modified Checklist for Autism in Toddlers, Revised (M-CHAT-R)">Validation of the Modified Checklist for Autism in Toddler…</td>
+      <td class="old"></td>
+      <td class="new">24366990</td>
+    </tr><tr>
+      <td class="c-id">78</td>
+      <td class="c-ti" title="Attention to eyes is present but in decline in 2-6-month-old infants later diagnosed with autism">Attention to eyes is present but in decline in 2-6-month-o…</td>
+      <td class="old"></td>
+      <td class="new">24196715</td>
+    </tr><tr>
+      <td class="c-id">82</td>
+      <td class="c-ti" title="Prevalence and Early Identification of Autism Spectrum Disorder Among Children Aged 4 and 8 Years - Autism and Developmental Disabilities Monitoring Network, 16 Sites, United States, 2022">Prevalence and Early Identification of Autism Spectrum Dis…</td>
+      <td class="old"></td>
+      <td class="new">40232988</td>
+    </tr><tr>
+      <td class="c-id">86</td>
+      <td class="c-ti" title="Virtual reality social cognition training for young adults with high-functioning autism">Virtual reality social cognition training for young adults…</td>
+      <td class="old"></td>
+      <td class="new">22570145</td>
+    </tr><tr>
+      <td class="c-id">87</td>
+      <td class="c-ti" title="Reducing specific phobia/fear in young people with autism spectrum disorders (ASDs) through a virtual reality environment intervention">Reducing specific phobia/fear in young people with autism …</td>
+      <td class="old"></td>
+      <td class="new">24987957</td>
+    </tr><tr>
+      <td class="c-id">89</td>
+      <td class="c-ti" title="Evidence-based practices for children, youth, and young adults with autism: Third generation review">Evidence-based practices for children, youth, and young ad…</td>
+      <td class="old"></td>
+      <td class="new">33449225</td>
+    </tr><tr>
+      <td class="c-id">90</td>
+      <td class="c-ti" title="RCT of a manualized social treatment for high-functioning autism spectrum disorders">RCT of a manualized social treatment for high-functioning …</td>
+      <td class="old"></td>
+      <td class="new">20232240</td>
+    </tr><tr>
+      <td class="c-id">91</td>
+      <td class="c-ti" title="Social skills training for young adults with high-functioning autism spectrum disorders: a randomized controlled pilot study">Social skills training for young adults with high-function…</td>
+      <td class="old"></td>
+      <td class="new">21915740</td>
+    </tr><tr>
+      <td class="c-id">93</td>
+      <td class="c-ti" title="The TEACCH program for children and adults with autism: a meta-analysis of intervention studies">The TEACCH program for children and adults with autism: a …</td>
+      <td class="old"></td>
+      <td class="new">23988454</td>
+    </tr><tr>
+      <td class="c-id">94</td>
+      <td class="c-ti" title="Efficacy of applied behavioral intervention in preschool children with autism for improving cognitive, language, and adaptive behavior: a systematic review and meta-analysis">Efficacy of applied behavioral intervention in preschool c…</td>
+      <td class="old"></td>
+      <td class="new">18950798</td>
+    </tr><tr>
+      <td class="c-id">95</td>
+      <td class="c-ti" title="Effects of augmentative and alternative communication intervention on speech production in children with autism: a systematic review">Effects of augmentative and alternative communication inte…</td>
+      <td class="old"></td>
+      <td class="new">18663107</td>
+    </tr><tr>
+      <td class="c-id">97</td>
+      <td class="c-ti" title="The effectiveness of parent-implemented language interventions: a meta-analysis">The effectiveness of parent-implemented language intervent…</td>
+      <td class="old"></td>
+      <td class="new">21478280</td>
+    </tr><tr>
+      <td class="c-id">98</td>
+      <td class="c-ti" title="The impact of augmentative and alternative communication intervention on the speech production of individuals with developmental disabilities: a research review">The impact of augmentative and alternative communication i…</td>
+      <td class="old"></td>
+      <td class="new">16671842</td>
+    </tr><tr>
+      <td class="c-id">99</td>
+      <td class="c-ti" title="Randomized comparison of two communication interventions for preschoolers with autism spectrum disorders">Randomized comparison of two communication interventions f…</td>
+      <td class="old"></td>
+      <td class="new">16822100</td>
+    </tr><tr>
+      <td class="c-id">100</td>
+      <td class="c-ti" title="Language outcome in autism: randomized comparison of joint attention and play interventions">Language outcome in autism: randomized comparison of joint…</td>
+      <td class="old"></td>
+      <td class="new">18229990</td>
+    </tr><tr>
+      <td class="c-id">101</td>
+      <td class="c-ti" title="Randomized controlled caregiver mediated joint engagement intervention for toddlers with autism">Randomized controlled caregiver mediated joint engagement …</td>
+      <td class="old"></td>
+      <td class="new">20145986</td>
+    </tr><tr>
+      <td class="c-id">102</td>
+      <td class="c-ti" title="Intervention targeting development of socially synchronous engagement in toddlers with autism spectrum disorder: a randomized controlled trial">Intervention targeting development of socially synchronous…</td>
+      <td class="old"></td>
+      <td class="new">21126245</td>
+    </tr><tr>
+      <td class="c-id">105</td>
+      <td class="c-ti" title="The use of social robots with children and young people on the autism spectrum: a systematic review and meta-analysis">The use of social robots with children and young people on…</td>
+      <td class="old"></td>
+      <td class="new">35731805</td>
+    </tr><tr>
+      <td class="c-id">106</td>
+      <td class="c-ti" title="Reducing behavior problems through functional communication training">Reducing behavior problems through functional communicatio…</td>
+      <td class="old"></td>
+      <td class="new">2410400</td>
+    </tr><tr>
+      <td class="c-id">110</td>
+      <td class="c-ti" title="Social story interventions for students with autism spectrum disorders: a meta-analysis">Social story interventions for students with autism spectr…</td>
+      <td class="old"></td>
+      <td class="new">20054628</td>
+    </tr><tr>
+      <td class="c-id">112</td>
+      <td class="c-ti" title="A systematic review of sensory processing interventions for children with autism spectrum disorders">A systematic review of sensory processing interventions fo…</td>
+      <td class="old"></td>
+      <td class="new">24477447</td>
+    </tr><tr>
+      <td class="c-id">113</td>
+      <td class="c-ti" title="Animal-assisted intervention for autism spectrum disorder: a systematic literature review">Animal-assisted intervention for autism spectrum disorder:…</td>
+      <td class="old">23286717</td>
+      <td class="new">23124442</td>
+    </tr><tr>
+      <td class="c-id">114</td>
+      <td class="c-ti" title="Randomized, controlled, crossover trial of methylphenidate in pervasive developmental disorders with hyperactivity">Randomized, controlled, crossover trial of methylphenidate…</td>
+      <td class="old">16275813</td>
+      <td class="new">16275814</td>
+    </tr><tr>
+      <td class="c-id">116</td>
+      <td class="c-ti" title="Vaccines are not associated with autism: an evidence-based meta-analysis of case-control and cohort studies">Vaccines are not associated with autism: an evidence-based…</td>
+      <td class="old">24859213</td>
+      <td class="new">24814559</td>
+    </tr><tr>
+      <td class="c-id">117</td>
+      <td class="c-ti" title="Internet-Based, Randomized, Controlled Trial of Omega-3 Fatty Acids for Hyperactivity in Autism">Internet-Based, Randomized, Controlled Trial of Omega-3 Fa…</td>
+      <td class="old"></td>
+      <td class="new">24839884</td>
+    </tr><tr>
+      <td class="c-id">118</td>
+      <td class="c-ti" title="Lack of effect of vitamin D3 supplementation in autism: a 20-week, placebo-controlled RCT">Lack of effect of vitamin D3 supplementation in autism: a …</td>
+      <td class="old"></td>
+      <td class="new">28626020</td>
+    </tr><tr>
+      <td class="c-id">119</td>
+      <td class="c-ti" title="A randomised-controlled trial of vitamin D and omega-3 long chain polyunsaturated fatty acids in the treatment of core symptoms of autism spectrum disorder in children">A randomised-controlled trial of vitamin D and omega-3 lon…</td>
+      <td class="old"></td>
+      <td class="new">30607782</td>
+    </tr><tr>
+      <td class="c-id">122</td>
+      <td class="c-ti" title="Autism intervention meta-analysis of early childhood studies (Project AIM): updated systematic review and secondary analysis">Autism intervention meta-analysis of early childhood studi…</td>
+      <td class="old"></td>
+      <td class="new">37963634</td>
+    </tr><tr>
+      <td class="c-id">124</td>
+      <td class="c-ti" title="Pharmacological and non-pharmacological interventions for irritability in autism spectrum disorder: a systematic review and meta-analysis with the GRADE assessment">Pharmacological and non-pharmacological interventions for …</td>
+      <td class="old"></td>
+      <td class="new">38263251</td>
+    </tr><tr>
+      <td class="c-id">125</td>
+      <td class="c-ti" title="Exercise interventions for health outcomes in children with autism spectrum disorder: an umbrella review of meta-analyses of clinical trials">Exercise interventions for health outcomes in children wit…</td>
+      <td class="old"></td>
+      <td class="new">40254115</td>
+    </tr><tr>
+      <td class="c-id">127</td>
+      <td class="c-ti" title="Comparison of the efficacy of parent-mediated NDBIs on developmental skills in children with ASD and fidelity in parents: a systematic review and network meta-analysis">Comparison of the efficacy of parent-mediated NDBIs on dev…</td>
+      <td class="old"></td>
+      <td class="new">38664754</td>
+    </tr><tr>
+      <td class="c-id">128</td>
+      <td class="c-ti" title="Digital interventions for autism spectrum disorders: a systematic review and meta-analysis">Digital interventions for autism spectrum disorders: a sys…</td>
+      <td class="old"></td>
+      <td class="new">39347529</td>
+    </tr><tr>
+      <td class="c-id">130</td>
+      <td class="c-ti" title="Nature-based interventions for autistic children: a systematic review and meta-analysis">Nature-based interventions for autistic children: a system…</td>
+      <td class="old"></td>
+      <td class="new">38060224</td>
+    </tr><tr>
+      <td class="c-id">131</td>
+      <td class="c-ti" title="Parent-mediated interventions for autism spectrum disorder under 3 years: a systematic review, meta-analysis, and moderator analyses">Parent-mediated interventions for autism spectrum disorder…</td>
+      <td class="old"></td>
+      <td class="new">40358871</td>
+    </tr><tr>
+      <td class="c-id">132</td>
+      <td class="c-ti" title="Comparison of effects of interventions to promote the mental health of parents of children with autism: a systematic review and network meta-analysis">Comparison of effects of interventions to promote the ment…</td>
+      <td class="old"></td>
+      <td class="new">39489145</td>
+    </tr><tr>
+      <td class="c-id">133</td>
+      <td class="c-ti" title="The global prevalence of autism spectrum disorder: a three-level meta-analysis">The global prevalence of autism spectrum disorder: a three…</td>
+      <td class="old"></td>
+      <td class="new">36846240</td>
+    </tr><tr>
+      <td class="c-id">134</td>
+      <td class="c-ti" title="Parent-mediated intervention versus no intervention for infants at high risk of autism: a parallel, single-blind, randomised trial (iBASIS-VIPP)">Parent-mediated intervention versus no intervention for in…</td>
+      <td class="old">25691244</td>
+      <td class="new">26359749</td>
+    </tr><tr>
+      <td class="c-id">137</td>
+      <td class="c-ti" title="Mesenchymal Stromal Cell Treatment Alleviates Autism Spectrum Disorder Symptoms: A Case Report">Mesenchymal Stromal Cell Treatment Alleviates Autism Spect…</td>
+      <td class="old"></td>
+      <td class="new">40462775</td>
+    </tr><tr>
+      <td class="c-id">138</td>
+      <td class="c-ti" title="Music Therapy and Pharmacotherapy as a Combination Treatment: A Case of Periodic Depression in Comorbidity With Subthreshold Autism">Music Therapy and Pharmacotherapy as a Combination Treatme…</td>
+      <td class="old"></td>
+      <td class="new">40190359</td>
+    </tr><tr>
+      <td class="c-id">139</td>
+      <td class="c-ti" title="Camouflaging in autism: a systematic review">Camouflaging in autism: a systematic review</td>
+      <td class="old"></td>
+      <td class="new">34563942</td>
+    </tr><tr>
+      <td class="c-id">140</td>
+      <td class="c-ti" title="Camouflage and masking behavior in adult autism">Camouflage and masking behavior in adult autism</td>
+      <td class="old"></td>
+      <td class="new">37009119</td>
+    </tr><tr>
+      <td class="c-id">142</td>
+      <td class="c-ti" title="The Experiences of Late-diagnosed Women with Autism Spectrum Conditions: An Investigation of the Female Autism Phenotype">The Experiences of Late-diagnosed Women with Autism Spectr…</td>
+      <td class="old"></td>
+      <td class="new">27457364</td>
+    </tr><tr>
+      <td class="c-id">143</td>
+      <td class="c-ti" title="Compensatory strategies below the behavioural surface in autism: a qualitative study">Compensatory strategies below the behavioural surface in a…</td>
+      <td class="old"></td>
+      <td class="new">31350208</td>
+    </tr></tbody></table></div></section>
+  <section class="grp">
+    <h2><span class="tag tag-ok">链接</span><span class="cnt">92 处</span></h2>
+    <p class="desc">原链接打不开、只到期刊首页，或是旧 DOI / 旧 PMID 的检索页</p>
+    <div class="tw"><table>
+      <thead><tr><th class="c-id">#</th><th>文献</th><th>修改前</th><th>修改后</th></tr></thead>
+      <tbody><tr>
+      <td class="c-id">1</td>
+      <td class="c-ti" title="Behavioral treatment and normal educational and intellectual functioning in young autistic children">Behavioral treatment and normal educational and intellectu…</td>
+      <td class="old">https://pubmed.ncbi.nlm.nih.gov/?term=10.1037%2F0022-006X.55.1.3</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/3571656/</td>
+    </tr><tr>
+      <td class="c-id">2</td>
+      <td class="c-ti" title="Long-term outcome for children with autism who received early intensive behavioral treatment">Long-term outcome for children with autism who received ea…</td>
+      <td class="old">https://pubmed.ncbi.nlm.nih.gov/?term=Long-term+outcome+for+children+with+…</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/8427693/</td>
+    </tr><tr>
+      <td class="c-id">3</td>
+      <td class="c-ti" title="Early intensive behavioral intervention (EIBI) for young children with autism spectrum disorders (ASD)">Early intensive behavioral intervention (EIBI) for young c…</td>
+      <td class="old">https://pubmed.ncbi.nlm.nih.gov/29729077/</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/29742275/</td>
+    </tr><tr>
+      <td class="c-id">6</td>
+      <td class="c-ti" title="Project AIM: Autism intervention meta-analysis for studies of young children">Project AIM: Autism intervention meta-analysis for studies…</td>
+      <td class="old">https://pubmed.ncbi.nlm.nih.gov/31922731/</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/31763860/</td>
+    </tr><tr>
+      <td class="c-id">7</td>
+      <td class="c-ti" title="Applied behavior analytic intervention for autism in early childhood: meta-analysis, meta-regression and dose-response meta-analysis of multiple outcomes">Applied behavior analytic intervention for autism in early…</td>
+      <td class="old">https://pubmed.ncbi.nlm.nih.gov/20189769/</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/20223569/</td>
+    </tr><tr>
+      <td class="c-id">9</td>
+      <td class="c-ti" title="Long-term outcomes of early intervention in 6-year-old children with autism spectrum disorder (ESDM 随访)">Long-term outcomes of early intervention in 6-year-old chi…</td>
+      <td class="old">https://pubmed.ncbi.nlm.nih.gov/26088660/</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/26088663/</td>
+    </tr><tr>
+      <td class="c-id">10</td>
+      <td class="c-ti" title="Autism treatment in the first year of life: a pilot study of Infant Start, a parent-implemented intervention for symptomatic infants">Autism treatment in the first year of life: a pilot study …</td>
+      <td class="old">https://pubmed.ncbi.nlm.nih.gov/24743928/</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/25212413/</td>
+    </tr><tr>
+      <td class="c-id">11</td>
+      <td class="c-ti" title="Outcomes of children receiving Group-Early Start Denver Model in an inclusive versus autism-specific setting: a pilot randomized controlled trial">Outcomes of children receiving Group-Early Start Denver Mo…</td>
+      <td class="old">https://pubmed.ncbi.nlm.nih.gov/29554430/</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/30296845/</td>
+    </tr><tr>
+      <td class="c-id">12</td>
+      <td class="c-ti" title="Effect of the TEACCH program on the rehabilitation of preschool children with autistic spectrum disorder: A randomized controlled trial">Effect of the TEACCH program on the rehabilitation of pres…</td>
+      <td class="old">https://www.sciencedirect.com/science/article/abs/pii/S0022395621002521</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/33962129/</td>
+    </tr><tr>
+      <td class="c-id">14</td>
+      <td class="c-ti" title="Evidence-based practices for children, youth, and young adults with Autism (National Standards Report, Phase 2)">Evidence-based practices for children, youth, and young ad…</td>
+      <td class="old">https://incaep.fpg.unc.edu/wp-content/uploads/EBP-Report-2020.pdf</td>
+      <td class="new">https://ncaep.fpg.unc.edu/wp-content/uploads/EBP-Report-2020.pdf</td>
+    </tr><tr>
+      <td class="c-id">18</td>
+      <td class="c-ti" title="Meta-analysis of parent-mediated interventions for young children with autism spectrum disorder">Meta-analysis of parent-mediated interventions for young c…</td>
+      <td class="old">https://pubmed.ncbi.nlm.nih.gov/28967266/</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/29490483/</td>
+    </tr><tr>
+      <td class="c-id">21</td>
+      <td class="c-ti" title="Caregiver-mediated intervention for low-resourced preschoolers with autism: an RCT (JASPER)">Caregiver-mediated intervention for low-resourced preschoo…</td>
+      <td class="old">https://pubmed.ncbi.nlm.nih.gov/24958583/</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/24958585/</td>
+    </tr><tr>
+      <td class="c-id">22</td>
+      <td class="c-ti" title="Randomized comparative efficacy study of parent-mediated interventions for toddlers with autism">Randomized comparative efficacy study of parent-mediated i…</td>
+      <td class="old">https://pubmed.ncbi.nlm.nih.gov/25674698/</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/25822242/</td>
+    </tr><tr>
+      <td class="c-id">26</td>
+      <td class="c-ti" title="Increasing access to an ASD imitation intervention via a telehealth parent training program">Increasing access to an ASD imitation intervention via a t…</td>
+      <td class="old">https://pubmed.ncbi.nlm.nih.gov/25971825/</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/25035089/</td>
+    </tr><tr>
+      <td class="c-id">27</td>
+      <td class="c-ti" title="A randomized controlled trial of Pivotal Response Treatment Group for parents of children with autism">A randomized controlled trial of Pivotal Response Treatmen…</td>
+      <td class="old">https://pubmed.ncbi.nlm.nih.gov/25976327/</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/25346345/</td>
+    </tr><tr>
+      <td class="c-id">28</td>
+      <td class="c-ti" title="A pivotal response treatment package for children with autism spectrum disorder: an RCT">A pivotal response treatment package for children with aut…</td>
+      <td class="old">https://pubmed.ncbi.nlm.nih.gov/31391157/</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/31387868/</td>
+    </tr><tr>
+      <td class="c-id">31</td>
+      <td class="c-ti" title="Intervention effects on spoken-language outcomes for children with autism: a systematic review and meta-analysis">Intervention effects on spoken-language outcomes for child…</td>
+      <td class="old">https://pubmed.ncbi.nlm.nih.gov/26758549/</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/27120988/</td>
+    </tr><tr>
+      <td class="c-id">32</td>
+      <td class="c-ti" title="Speech prosody interventions for persons with autism spectrum disorders: a systematic review">Speech prosody interventions for persons with autism spect…</td>
+      <td class="old">https://pubmed.ncbi.nlm.nih.gov/32551933/</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/32757615/</td>
+    </tr><tr>
+      <td class="c-id">33</td>
+      <td class="c-ti" title="Effect of &#x27;Developmental Speech and Language Training Through Music&#x27; on speech production in children with autism spectrum disorders">Effect of &#x27;Developmental Speech and Language Training Thro…</td>
+      <td class="old">https://pubmed.ncbi.nlm.nih.gov/20583790/</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/20635521/</td>
+    </tr><tr>
+      <td class="c-id">35</td>
+      <td class="c-ti" title="The relation between severity of autism and caregiver-child interaction: a study in the context of relationship development intervention">The relation between severity of autism and caregiver-chil…</td>
+      <td class="old">https://pubmed.ncbi.nlm.nih.gov/26438264/</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/26298470/</td>
+    </tr><tr>
+      <td class="c-id">36</td>
+      <td class="c-ti" title="Learning through interaction in children with autism: preliminary data from a social-communication-based intervention (DSP 模型前身)">Learning through interaction in children with autism: prel…</td>
+      <td class="old">https://pubmed.ncbi.nlm.nih.gov/21613236/</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/21949005/</td>
+    </tr><tr>
+      <td class="c-id">37</td>
+      <td class="c-ti" title="Developmental social pragmatic interventions for preschoolers with autism spectrum disorder: a systematic review">Developmental social pragmatic interventions for preschool…</td>
+      <td class="old">https://pubmed.ncbi.nlm.nih.gov/30854474/</td>
+      <td class="new">https://doi.org/10.1177/2396941518824497</td>
+    </tr><tr>
+      <td class="c-id">38</td>
+      <td class="c-ti" title="DIR/Floortime parent training intervention for children with developmental disabilities: a randomized controlled trial">DIR/Floortime parent training intervention for children wi…</td>
+      <td class="old">https://pubmed.ncbi.nlm.nih.gov/30976184/</td>
+      <td class="new">https://doi.org/10.33192/Smj.2019.51</td>
+    </tr><tr>
+      <td class="c-id">41</td>
+      <td class="c-ti" title="Music therapy for autistic people">Music therapy for autistic people</td>
+      <td class="old">https://pubmed.ncbi.nlm.nih.gov/35536567/</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/35532041/</td>
+    </tr><tr>
+      <td class="c-id">42</td>
+      <td class="c-ti" title="Effects of Mozart-Orff parent-child music therapy among mothers and their preschool children with autism spectrum disorder: a mixed-methods randomised controlled trial">Effects of Mozart-Orff parent-child music therapy among mo…</td>
+      <td class="old">https://pubmed.ncbi.nlm.nih.gov/?term=10.1186%2Fs12887-024-04960-7</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/39415148/</td>
+    </tr><tr>
+      <td class="c-id">43</td>
+      <td class="c-ti" title="Music improves social communication and auditory-motor connectivity in children with autism">Music improves social communication and auditory-motor con…</td>
+      <td class="old">https://pubmed.ncbi.nlm.nih.gov/30514979/</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/30352997/</td>
+    </tr><tr>
+      <td class="c-id">44</td>
+      <td class="c-ti" title="Development of the WHO caregiver skills training program for developmental disorders or delays">Development of the WHO caregiver skills training program f…</td>
+      <td class="old">https://pubmed.ncbi.nlm.nih.gov/31824314/</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/31780960/</td>
+    </tr><tr>
+      <td class="c-id">47</td>
+      <td class="c-ti" title="Autism and Its Lookalikes: A Case Report of a Child Whose Autism Diagnosis No Longer Fit Years Later">Autism and Its Lookalikes: A Case Report of a Child Whose …</td>
+      <td class="old">https://pmc.ncbi.nlm.nih.gov/articles/PMC12886185/</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/41675651/</td>
+    </tr><tr>
+      <td class="c-id">48</td>
+      <td class="c-ti" title="Challenging Case Report: Reevaluating autism diagnosis in a 7-year-old girl">Challenging Case Report: Reevaluating autism diagnosis in …</td>
+      <td class="old">https://www.frontiersin.org/journals/psychiatry/articles/10.3389/fpsyt.202…</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/41737729/</td>
+    </tr><tr>
+      <td class="c-id">52</td>
+      <td class="c-ti" title="New advances in the diagnosis and treatment of autism spectrum disorders">New advances in the diagnosis and treatment of autism spec…</td>
+      <td class="old">http://link.springer.com/article/10.1186/s40001-024-01916-2</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/38858682/</td>
+    </tr><tr>
+      <td class="c-id">53</td>
+      <td class="c-ti" title="Gangliosides and cholesterol: Dual regulators of neuronal membrane framework in autism spectrum disorder">Gangliosides and cholesterol: Dual regulators of neuronal …</td>
+      <td class="old">https://www.mdpi.com/1422-0067/26/3/1322</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/39941090/</td>
+    </tr><tr>
+      <td class="c-id">54</td>
+      <td class="c-ti" title="Screening and diagnostic tools for autism spectrum disorder: systematic review and meta-analysis">Screening and diagnostic tools for autism spectrum disorde…</td>
+      <td class="old">https://pubmed.ncbi.nlm.nih.gov/?term=10.1016%2Fj.clinsp.2023.100323</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/38484581/</td>
+    </tr><tr>
+      <td class="c-id">55</td>
+      <td class="c-ti" title="Parental Perspectives on Early Life Screening and Genetic Testing for ASD: A Systematic Review">Parental Perspectives on Early Life Screening and Genetic …</td>
+      <td class="old">https://link.springer.com/article/10.1007/s10803-023-06231-z</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/38353915/</td>
+    </tr><tr>
+      <td class="c-id">56</td>
+      <td class="c-ti" title="Prevalence and characteristics of autism spectrum disorder among children aged 8 years — Autism and Developmental Disabilities Monitoring Network, 11 sites, United States, 2020">Prevalence and characteristics of autism spectrum disorder…</td>
+      <td class="old">https://www.cdc.gov/mmwr/volumes/72/ss/ss7202a1.htm</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/36952288/</td>
+    </tr><tr>
+      <td class="c-id">62</td>
+      <td class="c-ti" title="AI-assisted early screening, diagnosis, and intervention for autism in young children">AI-assisted early screening, diagnosis, and intervention f…</td>
+      <td class="old">https://pmc.ncbi.nlm.nih.gov/articles/PMC12036476/</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/40297334/</td>
+    </tr><tr>
+      <td class="c-id">64</td>
+      <td class="c-ti" title="Evaluation of an artificial intelligence-based medical device for diagnosis of autism spectrum disorder">Evaluation of an artificial intelligence-based medical dev…</td>
+      <td class="old">https://pubmed.ncbi.nlm.nih.gov/35473942/</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/35513550/</td>
+    </tr><tr>
+      <td class="c-id">65</td>
+      <td class="c-ti" title="Risperidone in children with autism and serious behavioral problems (RUPP Autism Network)">Risperidone in children with autism and serious behavioral…</td>
+      <td class="old">https://pubmed.ncbi.nlm.nih.gov/?term=Risperidone+children+autism+serious+…</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/12151468/</td>
+    </tr><tr>
+      <td class="c-id">66</td>
+      <td class="c-ti" title="Atomoxetine, parent training, and their combination in children with autism spectrum disorder and attention-deficit/hyperactivity disorder">Atomoxetine, parent training, and their combination in chi…</td>
+      <td class="old">https://pubmed.ncbi.nlm.nih.gov/?term=Atomoxetine+parent+training+autism+H…</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/26506581/</td>
+    </tr><tr>
+      <td class="c-id">68</td>
+      <td class="c-ti" title="The gluten-free/casein-free diet: a double-blind challenge trial in children with autism">The gluten-free/casein-free diet: a double-blind challenge…</td>
+      <td class="old">https://pubmed.ncbi.nlm.nih.gov/?term=Hyman+gluten-free+casein-free+double…</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/26343026/</td>
+    </tr><tr>
+      <td class="c-id">70</td>
+      <td class="c-ti" title="Long-term benefit of Microbiota Transfer Therapy on autism symptoms and gut microbiota">Long-term benefit of Microbiota Transfer Therapy on autism…</td>
+      <td class="old">https://www.nature.com/articles/s41598-019-42183-0</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/30967657/</td>
+    </tr><tr>
+      <td class="c-id">72</td>
+      <td class="c-ti" title="Cognitive behavioral therapy for anxiety in children with autism spectrum disorders: a randomized, controlled trial">Cognitive behavioral therapy for anxiety in children with …</td>
+      <td class="old">https://pubmed.ncbi.nlm.nih.gov/?term=Wood+cognitive+behavioral+therapy+an…</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/19309326/</td>
+    </tr><tr>
+      <td class="c-id">73</td>
+      <td class="c-ti" title="Intranasal oxytocin treatment for social deficits and biomarkers of response in children with autism">Intranasal oxytocin treatment for social deficits and biom…</td>
+      <td class="old">https://pubmed.ncbi.nlm.nih.gov/?term=Parker+intranasal+oxytocin+children+…</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/28696286/</td>
+    </tr><tr>
+      <td class="c-id">74</td>
+      <td class="c-ti" title="An intervention for sensory difficulties in children with autism: a randomized trial (Ayres Sensory Integration)">An intervention for sensory difficulties in children with …</td>
+      <td class="old">https://pubmed.ncbi.nlm.nih.gov/?term=Schaaf+sensory+integration+children+…</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/24214165/</td>
+    </tr><tr>
+      <td class="c-id">75</td>
+      <td class="c-ti" title="Joint attention and symbolic play in young children with autism: a randomized controlled intervention study (JASPER)">Joint attention and symbolic play in young children with a…</td>
+      <td class="old">https://pubmed.ncbi.nlm.nih.gov/?term=Kasari+joint+attention+symbolic+play…</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/16712638/</td>
+    </tr><tr>
+      <td class="c-id">76</td>
+      <td class="c-ti" title="Long-term outcomes of parent-assisted social skills intervention for high-functioning children with autism spectrum disorder: the UCLA PEERS program">Long-term outcomes of parent-assisted social skills interv…</td>
+      <td class="old">https://pubmed.ncbi.nlm.nih.gov/?term=Mandelberg+PEERS+parent-assisted+soc…</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/23996903/</td>
+    </tr><tr>
+      <td class="c-id">77</td>
+      <td class="c-ti" title="Validation of the Modified Checklist for Autism in Toddlers, Revised (M-CHAT-R)">Validation of the Modified Checklist for Autism in Toddler…</td>
+      <td class="old">https://pubmed.ncbi.nlm.nih.gov/?term=Robins+validation+M-CHAT-R+2014+Pedi…</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/24366990/</td>
+    </tr><tr>
+      <td class="c-id">78</td>
+      <td class="c-ti" title="Attention to eyes is present but in decline in 2-6-month-old infants later diagnosed with autism">Attention to eyes is present but in decline in 2-6-month-o…</td>
+      <td class="old">https://pubmed.ncbi.nlm.nih.gov/?term=Jones+Klin+attention+eyes+infants+au…</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/24196715/</td>
+    </tr><tr>
+      <td class="c-id">79</td>
+      <td class="c-ti" title="孤独症谱系障碍儿童早期识别筛查和早期干预专家共识">孤独症谱系障碍儿童早期识别筛查和早期干预专家共识</td>
+      <td class="old">https://rs.yiigle.com/cmaid/937807</td>
+      <td class="new">https://doi.org/10.3760/cma.j.issn.0578-1310.2017.12.002</td>
+    </tr><tr>
+      <td class="c-id">82</td>
+      <td class="c-ti" title="Prevalence and Early Identification of Autism Spectrum Disorder Among Children Aged 4 and 8 Years - Autism and Developmental Disabilities Monitoring Network, 16 Sites, United States, 2022">Prevalence and Early Identification of Autism Spectrum Dis…</td>
+      <td class="old">https://www.cdc.gov/mmwr/volumes/74/ss/ss7402a1.htm</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/40232988/</td>
+    </tr><tr>
+      <td class="c-id">84</td>
+      <td class="c-ti" title="Prevalence of Autism Spectrum Disorder Among US Children and Adolescents, 2019-2020">Prevalence of Autism Spectrum Disorder Among US Children a…</td>
+      <td class="old">https://jamanetwork.com/journals/jamapediatrics</td>
+      <td class="new">https://doi.org/10.1001/jamapediatrics.2022.1846</td>
+    </tr><tr>
+      <td class="c-id">86</td>
+      <td class="c-ti" title="Virtual reality social cognition training for young adults with high-functioning autism">Virtual reality social cognition training for young adults…</td>
+      <td class="old">https://pubmed.ncbi.nlm.nih.gov/?term=Kandalaft+virtual+reality+social+cog…</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/22570145/</td>
+    </tr><tr>
+      <td class="c-id">87</td>
+      <td class="c-ti" title="Reducing specific phobia/fear in young people with autism spectrum disorders (ASDs) through a virtual reality environment intervention">Reducing specific phobia/fear in young people with autism …</td>
+      <td class="old">https://pubmed.ncbi.nlm.nih.gov/?term=Maskey+virtual+reality+phobia+autism…</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/24987957/</td>
+    </tr><tr>
+      <td class="c-id">88</td>
+      <td class="c-ti" title="A Systematic Review of Virtual Reality vs. Standard Social Skills Training for Improving Social Interaction Skills and Reducing Social Anxiety in Children With Autism Spectrum Disorder">A Systematic Review of Virtual Reality vs. Standard Social…</td>
+      <td class="old">https://www.cambridge.org/core/journals/bjpsych-open</td>
+      <td class="new">https://doi.org/10.1192/bjo.2024.171</td>
+    </tr><tr>
+      <td class="c-id">89</td>
+      <td class="c-ti" title="Evidence-based practices for children, youth, and young adults with autism: Third generation review">Evidence-based practices for children, youth, and young ad…</td>
+      <td class="old">https://pubmed.ncbi.nlm.nih.gov/?term=Hume+evidence-based+practices+third+…</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/33449225/</td>
+    </tr><tr>
+      <td class="c-id">90</td>
+      <td class="c-ti" title="RCT of a manualized social treatment for high-functioning autism spectrum disorders">RCT of a manualized social treatment for high-functioning …</td>
+      <td class="old">https://pubmed.ncbi.nlm.nih.gov/?term=Lopata+manualized+social+treatment+a…</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/20232240/</td>
+    </tr><tr>
+      <td class="c-id">91</td>
+      <td class="c-ti" title="Social skills training for young adults with high-functioning autism spectrum disorders: a randomized controlled pilot study">Social skills training for young adults with high-function…</td>
+      <td class="old">https://pubmed.ncbi.nlm.nih.gov/?term=Gantman+PEERS+young+adults+randomize…</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/21915740/</td>
+    </tr><tr>
+      <td class="c-id">93</td>
+      <td class="c-ti" title="The TEACCH program for children and adults with autism: a meta-analysis of intervention studies">The TEACCH program for children and adults with autism: a …</td>
+      <td class="old">https://pubmed.ncbi.nlm.nih.gov/?term=Virues-Ortega+TEACCH+meta-analysis+2…</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/23988454/</td>
+    </tr><tr>
+      <td class="c-id">94</td>
+      <td class="c-ti" title="Efficacy of applied behavioral intervention in preschool children with autism for improving cognitive, language, and adaptive behavior: a systematic review and meta-analysis">Efficacy of applied behavioral intervention in preschool c…</td>
+      <td class="old">https://pubmed.ncbi.nlm.nih.gov/?term=Spreckley+Boyd+efficacy+applied+beha…</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/18950798/</td>
+    </tr><tr>
+      <td class="c-id">95</td>
+      <td class="c-ti" title="Effects of augmentative and alternative communication intervention on speech production in children with autism: a systematic review">Effects of augmentative and alternative communication inte…</td>
+      <td class="old">https://pubs.asha.org/doi/10.1044/1058-0360%282008/021%29</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/18663107/</td>
+    </tr><tr>
+      <td class="c-id">97</td>
+      <td class="c-ti" title="The effectiveness of parent-implemented language interventions: a meta-analysis">The effectiveness of parent-implemented language intervent…</td>
+      <td class="old">https://pubs.asha.org/doi/10.1044/1058-0360%282011/10-0055%29</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/21478280/</td>
+    </tr><tr>
+      <td class="c-id">98</td>
+      <td class="c-ti" title="The impact of augmentative and alternative communication intervention on the speech production of individuals with developmental disabilities: a research review">The impact of augmentative and alternative communication i…</td>
+      <td class="old">https://pubmed.ncbi.nlm.nih.gov/?term=Millar+Light+Schlosser+impact+augmen…</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/16671842/</td>
+    </tr><tr>
+      <td class="c-id">99</td>
+      <td class="c-ti" title="Randomized comparison of two communication interventions for preschoolers with autism spectrum disorders">Randomized comparison of two communication interventions f…</td>
+      <td class="old">https://pubmed.ncbi.nlm.nih.gov/?term=Yoder+Stone+randomized+comparison+co…</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/16822100/</td>
+    </tr><tr>
+      <td class="c-id">100</td>
+      <td class="c-ti" title="Language outcome in autism: randomized comparison of joint attention and play interventions">Language outcome in autism: randomized comparison of joint…</td>
+      <td class="old">https://pubmed.ncbi.nlm.nih.gov/?term=Kasari+language+outcome+autism+rando…</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/18229990/</td>
+    </tr><tr>
+      <td class="c-id">101</td>
+      <td class="c-ti" title="Randomized controlled caregiver mediated joint engagement intervention for toddlers with autism">Randomized controlled caregiver mediated joint engagement …</td>
+      <td class="old">https://pubmed.ncbi.nlm.nih.gov/?term=Kasari+randomized+caregiver+mediated…</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/20145986/</td>
+    </tr><tr>
+      <td class="c-id">102</td>
+      <td class="c-ti" title="Intervention targeting development of socially synchronous engagement in toddlers with autism spectrum disorder: a randomized controlled trial">Intervention targeting development of socially synchronous…</td>
+      <td class="old">https://pubmed.ncbi.nlm.nih.gov/?term=Landa+intervention+socially+synchron…</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/21126245/</td>
+    </tr><tr>
+      <td class="c-id">104</td>
+      <td class="c-ti" title="Effects of joint attention mediated learning for toddlers with autism spectrum disorders: an initial randomized controlled study">Effects of joint attention mediated learning for toddlers …</td>
+      <td class="old">https://pubmed.ncbi.nlm.nih.gov/?term=Schertz+joint+attention+mediated+lea…</td>
+      <td class="new">https://doi.org/10.1016/j.ecresq.2012.06.006</td>
+    </tr><tr>
+      <td class="c-id">105</td>
+      <td class="c-ti" title="The use of social robots with children and young people on the autism spectrum: a systematic review and meta-analysis">The use of social robots with children and young people on…</td>
+      <td class="old">https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0269800</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/35731805/</td>
+    </tr><tr>
+      <td class="c-id">106</td>
+      <td class="c-ti" title="Reducing behavior problems through functional communication training">Reducing behavior problems through functional communicatio…</td>
+      <td class="old">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1308032/</td>
+      <td class="new">https://doi.org/10.1901/jaba.1985.18-111</td>
+    </tr><tr>
+      <td class="c-id">110</td>
+      <td class="c-ti" title="Social story interventions for students with autism spectrum disorders: a meta-analysis">Social story interventions for students with autism spectr…</td>
+      <td class="old">https://pubmed.ncbi.nlm.nih.gov/?term=Kokina+Kern+social+story+interventio…</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/20054628/</td>
+    </tr><tr>
+      <td class="c-id">112</td>
+      <td class="c-ti" title="A systematic review of sensory processing interventions for children with autism spectrum disorders">A systematic review of sensory processing interventions fo…</td>
+      <td class="old">https://pubmed.ncbi.nlm.nih.gov/?term=Case-Smith+systematic+review+sensory…</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/24477447/</td>
+    </tr><tr>
+      <td class="c-id">113</td>
+      <td class="c-ti" title="Animal-assisted intervention for autism spectrum disorder: a systematic literature review">Animal-assisted intervention for autism spectrum disorder:…</td>
+      <td class="old">https://pubmed.ncbi.nlm.nih.gov/23286717/</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/23124442/</td>
+    </tr><tr>
+      <td class="c-id">114</td>
+      <td class="c-ti" title="Randomized, controlled, crossover trial of methylphenidate in pervasive developmental disorders with hyperactivity">Randomized, controlled, crossover trial of methylphenidate…</td>
+      <td class="old">https://pubmed.ncbi.nlm.nih.gov/16275813/</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/16275814/</td>
+    </tr><tr>
+      <td class="c-id">115</td>
+      <td class="c-ti" title="Aripiprazole in the treatment of irritability in children and adolescents with autistic disorder">Aripiprazole in the treatment of irritability in children …</td>
+      <td class="old">https://pubmed.ncbi.nlm.nih.gov/?term=Owen+aripiprazole+irritability+child…</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/19948625/</td>
+    </tr><tr>
+      <td class="c-id">116</td>
+      <td class="c-ti" title="Vaccines are not associated with autism: an evidence-based meta-analysis of case-control and cohort studies">Vaccines are not associated with autism: an evidence-based…</td>
+      <td class="old">https://pubmed.ncbi.nlm.nih.gov/24859213/</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/24814559/</td>
+    </tr><tr>
+      <td class="c-id">117</td>
+      <td class="c-ti" title="Internet-Based, Randomized, Controlled Trial of Omega-3 Fatty Acids for Hyperactivity in Autism">Internet-Based, Randomized, Controlled Trial of Omega-3 Fa…</td>
+      <td class="old">https://pubmed.ncbi.nlm.nih.gov/?term=Bent+omega-3+hyperactivity+autism+ra…</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/24839884/</td>
+    </tr><tr>
+      <td class="c-id">118</td>
+      <td class="c-ti" title="Lack of effect of vitamin D3 supplementation in autism: a 20-week, placebo-controlled RCT">Lack of effect of vitamin D3 supplementation in autism: a …</td>
+      <td class="old">https://pubmed.ncbi.nlm.nih.gov/?term=Kerley+lack+of+effect+vitamin+D3+sup…</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/28626020/</td>
+    </tr><tr>
+      <td class="c-id">119</td>
+      <td class="c-ti" title="A randomised-controlled trial of vitamin D and omega-3 long chain polyunsaturated fatty acids in the treatment of core symptoms of autism spectrum disorder in children">A randomised-controlled trial of vitamin D and omega-3 lon…</td>
+      <td class="old">https://pubmed.ncbi.nlm.nih.gov/?term=Mazahery+randomised+vitamin+D+omega-…</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/30607782/</td>
+    </tr><tr>
+      <td class="c-id">122</td>
+      <td class="c-ti" title="Autism intervention meta-analysis of early childhood studies (Project AIM): updated systematic review and secondary analysis">Autism intervention meta-analysis of early childhood studi…</td>
+      <td class="old">https://www.bmj.com/content/383/bmj-2023-076733</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/37963634/</td>
+    </tr><tr>
+      <td class="c-id">124</td>
+      <td class="c-ti" title="Pharmacological and non-pharmacological interventions for irritability in autism spectrum disorder: a systematic review and meta-analysis with the GRADE assessment">Pharmacological and non-pharmacological interventions for …</td>
+      <td class="old">https://pubmed.ncbi.nlm.nih.gov/?term=Choi+pharmacological+non-pharmacolog…</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/38263251/</td>
+    </tr><tr>
+      <td class="c-id">125</td>
+      <td class="c-ti" title="Exercise interventions for health outcomes in children with autism spectrum disorder: an umbrella review of meta-analyses of clinical trials">Exercise interventions for health outcomes in children wit…</td>
+      <td class="old">https://pubmed.ncbi.nlm.nih.gov/?term=Gao+exercise+interventions+autism+um…</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/40254115/</td>
+    </tr><tr>
+      <td class="c-id">127</td>
+      <td class="c-ti" title="Comparison of the efficacy of parent-mediated NDBIs on developmental skills in children with ASD and fidelity in parents: a systematic review and network meta-analysis">Comparison of the efficacy of parent-mediated NDBIs on dev…</td>
+      <td class="old">https://pubmed.ncbi.nlm.nih.gov/?term=Ouyang+parent-mediated+NDBIs+network…</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/38664754/</td>
+    </tr><tr>
+      <td class="c-id">128</td>
+      <td class="c-ti" title="Digital interventions for autism spectrum disorders: a systematic review and meta-analysis">Digital interventions for autism spectrum disorders: a sys…</td>
+      <td class="old">https://pubmed.ncbi.nlm.nih.gov/?term=Wang+digital+interventions+autism+me…</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/39347529/</td>
+    </tr><tr>
+      <td class="c-id">130</td>
+      <td class="c-ti" title="Nature-based interventions for autistic children: a systematic review and meta-analysis">Nature-based interventions for autistic children: a system…</td>
+      <td class="old">https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2812621</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/38060224/</td>
+    </tr><tr>
+      <td class="c-id">131</td>
+      <td class="c-ti" title="Parent-mediated interventions for autism spectrum disorder under 3 years: a systematic review, meta-analysis, and moderator analyses">Parent-mediated interventions for autism spectrum disorder…</td>
+      <td class="old">https://pubmed.ncbi.nlm.nih.gov/?term=Zhao+parent-mediated+interventions+a…</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/40358871/</td>
+    </tr><tr>
+      <td class="c-id">132</td>
+      <td class="c-ti" title="Comparison of effects of interventions to promote the mental health of parents of children with autism: a systematic review and network meta-analysis">Comparison of effects of interventions to promote the ment…</td>
+      <td class="old">https://pubmed.ncbi.nlm.nih.gov/?term=Mo+comparison+interventions+mental+h…</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/39489145/</td>
+    </tr><tr>
+      <td class="c-id">133</td>
+      <td class="c-ti" title="The global prevalence of autism spectrum disorder: a three-level meta-analysis">The global prevalence of autism spectrum disorder: a three…</td>
+      <td class="old">https://pubmed.ncbi.nlm.nih.gov/?term=Talantseva+global+prevalence+autism+…</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/36846240/</td>
+    </tr><tr>
+      <td class="c-id">134</td>
+      <td class="c-ti" title="Parent-mediated intervention versus no intervention for infants at high risk of autism: a parallel, single-blind, randomised trial (iBASIS-VIPP)">Parent-mediated intervention versus no intervention for in…</td>
+      <td class="old">https://pubmed.ncbi.nlm.nih.gov/25691244/</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/26359749/</td>
+    </tr><tr>
+      <td class="c-id">137</td>
+      <td class="c-ti" title="Mesenchymal Stromal Cell Treatment Alleviates Autism Spectrum Disorder Symptoms: A Case Report">Mesenchymal Stromal Cell Treatment Alleviates Autism Spect…</td>
+      <td class="old">https://www.cureus.com/articles/319211</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/40462775/</td>
+    </tr><tr>
+      <td class="c-id">138</td>
+      <td class="c-ti" title="Music Therapy and Pharmacotherapy as a Combination Treatment: A Case of Periodic Depression in Comorbidity With Subthreshold Autism">Music Therapy and Pharmacotherapy as a Combination Treatme…</td>
+      <td class="old">https://pmc.ncbi.nlm.nih.gov/articles/PMC11968417/</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/40190359/</td>
+    </tr><tr>
+      <td class="c-id">139</td>
+      <td class="c-ti" title="Camouflaging in autism: a systematic review">Camouflaging in autism: a systematic review</td>
+      <td class="old">https://pubmed.ncbi.nlm.nih.gov/?term=Cook+camouflaging+autism+systematic+…</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/34563942/</td>
+    </tr><tr>
+      <td class="c-id">140</td>
+      <td class="c-ti" title="Camouflage and masking behavior in adult autism">Camouflage and masking behavior in adult autism</td>
+      <td class="old">https://www.frontiersin.org/journals/psychiatry/articles/10.3389/fpsyt.202…</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/37009119/</td>
+    </tr><tr>
+      <td class="c-id">143</td>
+      <td class="c-ti" title="Compensatory strategies below the behavioural surface in autism: a qualitative study">Compensatory strategies below the behavioural surface in a…</td>
+      <td class="old">https://pubmed.ncbi.nlm.nih.gov/?term=Livingston+compensatory+strategies+b…</td>
+      <td class="new">https://pubmed.ncbi.nlm.nih.gov/31350208/</td>
+    </tr></tbody></table></div></section>
+<footer>
+  修改前的原始文件已备份为 server/seed.py.bak.20261102-181938，随时可回滚。<br>
+  本次共改动 259 个字段，摘要、关键词、分类等内容未做任何改动；前端页面与移动端适配未改动。
+</footer>
+</div></body></html>

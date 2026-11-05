@@ -24,3 +24,13 @@ npm-debug.log*
 .idea/
 .DS_Store
 Thumbs.db
+
+# 本地生成物（数据库由 server/seed.py 自动重建，不必入库）
+server/neurosearch.db
+server/neurosearch.db-journal
+__pycache__/
+server/__pycache__/
+
+# 本地备份
+server/seed.py.bak.*
+*.bak.*
