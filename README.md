@@ -20,6 +20,8 @@ neurosearch/
 ├── docs/                # 历次核验与修正报告
 ├── DEPLOY.md            # 部署与维护手册
 ├── RESTORE.md           # 换电脑 / 备份 / 数据恢复
+├── 启动网站.command       # macOS 双击启动
+├── 启动网站.bat           # Windows 双击启动
 └── README.md
 ```
 
@@ -27,10 +29,16 @@ neurosearch/
 
 要求：Python 3.8+（无需第三方库）
 
+**最省事**：双击 `启动网站.command`（macOS）/ `启动网站.bat`（Windows）——自动找 Python、首次自动建库、起服务并打开浏览器。
+
+命令行方式：
+
 ```bash
 cd neurosearch
-python server/seed.py       # 生成数据库（404 条）
-python server/server.py     # 打开 http://localhost:8000
+python  server/seed.py      # Windows  → 生成数据库（404 条）
+python3 server/seed.py      # macOS
+python  server/server.py    # Windows
+python3 server/server.py    # macOS → 打开 http://localhost:8000
 ```
 
 ## API 接口
