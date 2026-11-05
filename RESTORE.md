@@ -37,9 +37,28 @@
 
 ## 三、换电脑：从零到网站跑起来（约 10 分钟）
 
-### 第 1 步：装 Python
+### 最省事的方式：整包拷过去，双击启动（推荐换 Mac 用这个）
+
+项目里所有文件都是纯文本（`.py` / `.html` / `.md`），**换设备后内容一字不变**，不存在"Windows 版文件 Mac 打不开"的问题——只有启动命令从 `python` 变成 `python3`。
+
+1. 把 `NeuroSearch-完整备份-*.zip` 拷到新电脑桌面（AirDrop / U 盘 / 网盘都行）
+2. 双击解压，得到桌面的 `neurosearch` 文件夹
+3. 双击里面的 **`启动网站.command`**（Mac）/ **`启动网站.bat`**（Windows）
+   - 它会自动找 Python、首次自动建库、启动服务并打开浏览器
+   - Mac 第一次双击若提示"无法打开，因为来自身份不明的开发者"：右键→打开→再点"打开"；或在终端执行一次
+     `xattr -dr com.apple.quarantine ~/Desktop/neurosearch` 和 `chmod +x ~/Desktop/neurosearch/启动网站.command`
+4. 看到文献列表就是成功；关网站就关掉那个终端窗口
+
+Mac 自带 Python 3（终端里 `python3 --version` 能看到版本），**一般不需要额外安装**；如果提示找不到 Python，去 https://www.python.org/downloads/macos/ 装一个即可。项目代码兼容 Python 3.8 及以上。
+
+> 8000 端口若被占用（`Address already in use`），用 `PORT=8010 python3 server/server.py` 换端口启动。
+
+### 或者：从 GitHub 重新拉一份（适合新电脑网络正常的情况）
+
+#### 第 1 步：装 Python
 
 到 https://www.python.org/downloads/ 装 3.10 以上版本（3.12/3.13 都行），安装时勾选 **Add Python to PATH**。
+Mac 上安装包自带命令，装完终端里 `python3 --version` 能出版本即可。
 
 ### 第 2 步：拿到代码（两种任选）
 
@@ -56,8 +75,13 @@ git clone https://github.com/Jas1me/wenxian.git neurosearch
 
 ```bash
 cd neurosearch
-python server/seed.py       # 生成 server/neurosearch.db（404 条）
-python server/server.py     # 打开 http://localhost:8000
+python  server/seed.py       # Windows
+python3 server/seed.py       # macOS / Linux
+# → 生成 server/neurosearch.db（404 条）
+
+python  server/server.py     # Windows
+python3 server/server.py     # macOS / Linux
+# → 打开 http://localhost:8000
 ```
 
 看到文献列表就是成功了。`seed.py` 会打印建库信息，条数应为 **404**。
